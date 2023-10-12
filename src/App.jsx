@@ -1,9 +1,25 @@
 import './App.css'
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    if(theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+    else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme])
+
+  const handleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+  
   return (
-    <div className='container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10'>
-      <h1 className='text-xl text-blue-900 font-bold'>Tailwind Test</h1>
+    <div className='h-screen bg-gray-200 dark:bg-gray-900 flex justify-center items-center'>
+      <button className='bg-white rounded-2xl p-3 shadow' onClick={handleTheme}>Change Theme</button>
     </div>
   )
 }
