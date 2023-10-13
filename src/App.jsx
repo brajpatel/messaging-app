@@ -1,7 +1,9 @@
-import './App.css'
-import { useState, useEffect } from 'react'
+import './App.css';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
+  const [user, setUser] = useState(null);
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
@@ -27,8 +29,16 @@ function App() {
   }
   
   return (
-    <div className='h-screen bg-gray-200 dark:bg-gray-900 flex justify-center items-center'>
-      <button className='bg-white rounded-2xl p-3 shadow' onClick={handleTheme}>Change Theme</button>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          {!user ? (
+            <Route path='/'/>
+          ) : (
+            <Route path='/'/>
+          )}
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
