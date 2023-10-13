@@ -33,9 +33,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           {!user ? (
-            <Route path='/'/>
+            <Route path='/' element={<div>signed out</div>}/>
           ) : (
-            <Route path='/'/>
+            <Route path='/' element={<div>signed in</div>}/>
           )}
         </Routes>
       </BrowserRouter>
