@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -33,7 +34,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {!user ? (
-            <Route path='/' element={<div>signed out</div>}/>
+            <Route path='/' element={ <Login/> }/>
           ) : (
             <Route path='/' element={<div>signed in</div>}/>
           )}
