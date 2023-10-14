@@ -8,7 +8,7 @@ function App() {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-    if(window.matchMedia('prefers-color-scheme: dark').matches) {
+    if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
       setTheme('dark');
     }
     else {
@@ -19,22 +19,24 @@ function App() {
   useEffect(() => {
     if(theme === 'dark') {
       document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
     }
     else {
       document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
     }
   }, [theme])
 
   const handleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   }
   
   return (
-    <div>
+    <div className='bg-gray-100 dark:bg-gray-900'>
       <BrowserRouter>
         <Routes>
           {!user ? (
-            <Route path='/' element={ <Login/> }/>
+            <Route path='/' element={ <Login handleTheme={handleTheme}/> }/>
           ) : (
             <Route path='/' element={<div>signed in</div>}/>
           )}
