@@ -2,13 +2,28 @@ function Login() {
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
             <div className="flex items-center justify-center gap-60 px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center">
                     <a href="#" className="flex items-center mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
                         <img className="w-20 h-20" src="/logo.png" alt="logo"/>
                         Macaw
                     </a>
+                    
+                    <div className="flex items-center gap-2">
+                        <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+                        <div className="flex flex-col">
+                            <p className="font-bold">Make connections</p>
+                            <p>Connect with others from around the world</p>
+                        </div>
+                    </div>
+
                     <div>
-                        
+                        <i className="fa-solid fa-circle-check"></i>
+                        <p>two</p>
+                    </div>
+
+                    <div>
+                        <i className="fa-solid fa-circle-check"></i>
+                        <p>three</p>
                     </div>
                 </div>
 
