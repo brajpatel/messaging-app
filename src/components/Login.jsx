@@ -1,52 +1,58 @@
 function Login() {
     return (
-        <section className="bg-gray-50 dark:bg-gray-900">
-            <div className="flex items-center justify-center gap-60 px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <div className="flex flex-col items-center">
-                    <a href="#" className="flex items-center mb-2 text-2xl font-semibold text-gray-900 dark:text-white">
-                        <img className="w-20 h-20" src="/logo.png" alt="logo"/>
+        <section className="bg-gray-50 dark:bg-gray-900 h-screen">
+            <div className="flex items-center justify-center gap-10 px-6 mx-auto lg:py-0">
+                <div className="hidden md:flex flex-col items-center md:w-1/2 lg:w-1/3">
+                    <a href="https://github.com/brajpatel" target="_blank" className="flex items-center text-2xl font-semibold text-gray-900 dark:text-gray-50">
+                        <img className="w-32 h-32" src="/logo.png" alt="logo"/>
                         Macaw
                     </a>
-                    
-                    <div className="flex items-center gap-2">
-                        <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
-                        <div className="flex flex-col">
-                            <p className="font-bold">Make connections</p>
-                            <p>Connect with others from around the world</p>
+                
+                    <div className="flex flex-col gap-5">
+                        <div className="flex gap-2">
+                            <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+                            <div className="flex flex-col">
+                                <p className="font-bold text-lg lg:text-xl dark:text-gray-200">Make connections</p>
+                                <p className="lg:text-lg dark:text-gray-300">Connect with others from around the world!</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <i className="fa-solid fa-circle-check"></i>
-                        <p>two</p>
-                    </div>
+                        <div className="flex gap-2">
+                            <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+                            <div className="flex flex-col">
+                                <p className="font-bold text-lg lg:text-xl dark:text-gray-200">Another feature</p>
+                                <p className="lg:text-lg dark:text-gray-300">Description for this feature</p>
+                            </div>
+                        </div>
 
-                    <div>
-                        <i className="fa-solid fa-circle-check"></i>
-                        <p>three</p>
+                        <div className="flex gap-2">
+                            <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+                            <div className="flex flex-col">
+                                <p className="font-bold text-lg lg:text-xl dark:text-gray-200">Another feature</p>
+                                <p className="lg:text-lg dark:text-gray-300">Description for this feature</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div className="bg-white dark:bg-gray-700 shadow p-6 space-y-4 md:space-y-6 sm:p-8 rounded-lg">
-                    <h1 className='font-bold dark:text-gray-100'>
-                        Sign in to your account
-                    </h1>
+                <div className="bg-white dark:bg-gray-800 shadow p-6 space-y-4 w-full mt-8 md:w-1/2 md:mt-12 lg:w-1/3 md:space-y-6 sm:p-8 rounded-lg">
+                    <h1 className='font-bold dark:text-gray-100 text-xl text-center underline'>Sign in to your account</h1>
                     <form className="space-y-4 md:space-y-6" action="#">
                         <div>
-                            <label className="mb-2" htmlFor="email">Your email</label>
-                            <input className='block w-full px-4 py-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="email" name="email" id="email" placeholder="name@company.com" required=""/>
+                            <label className="text-lg dark:text-gray-100" htmlFor="email">Your email</label>
+                            <input className='block text-lg w-full px-4 py-2 mt-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="email" name="email" id="email" placeholder="name@company.com" required=""/>
                         </div>
+
                         <div>
-                            <label className="mb-2" htmlFor="password">Password</label>
-                            <input className='block w-full px-4 py-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="password" name="password" id="password" placeholder="••••••••••••" required=""/>
+                            <label className="text-lg dark:text-gray-100" htmlFor="password">Password</label>
+                            <input className='block text-lg w-full px-4 py-2 mt-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="password" name="password" id="password" placeholder="••••••••••••" required=""/>
                         </div>
-                        <div>
-                            <a href="#">Forgot password?</a>
-                        </div>
-                        <button className="bg-rose-600 text-white w-full py-2 rounded-md" type="submit">Sign in</button>
-                        <p>
-                            Don't have an account yet? <a href="#">Sign up</a>
+
+                        <p className="text-lg dark:text-gray-300 text-center">
+                            Don't have an account yet? <a href="#" className="text-rose-600 dark:text-rose-500 hover:underline">Sign up</a>
                         </p>
+
+                        <button className="bg-rose-600 text-white w-full py-2 rounded-md" type="submit">Sign in</button>
                     </form>
                 </div>
             </div>
