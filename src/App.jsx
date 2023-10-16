@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, redirect } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 
 function App() {
@@ -37,9 +37,9 @@ function App() {
         <Routes>
           {!user ? (
             <>
-              <Route path='/' element={<div>REDIRECT ME</div>}/>
               <Route path='/login' element={ <Login handleTheme={handleTheme}/> }/>
               <Route path='/sign-up' element={ <div>Sign up</div> }/>
+              <Route path='*' element={<Navigate to="/login"/>}/>
             </>
           ) : (
             <Route path='/' element={<div>signed in</div>}/>
