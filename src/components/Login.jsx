@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function Login() {
     return (
         <section className="bg-gray-50 dark:bg-gray-900 h-screen">
             <div className="flex items-center justify-center gap-10 px-6 mx-auto lg:py-0">
-                <div className="bg-white dark:bg-gray-800 shadow p-6 space-y-4 w-full mt-8 md:w-1/2 md:mt-12 lg:w-1/3 md:space-y-6 sm:p-8 rounded-lg">
+                <div className="bg-white dark:bg-gray-800 shadow-lg p-6 space-y-4 w-full mt-8 md:w-1/2 md:mt-12 lg:w-1/3 md:space-y-6 sm:p-8 rounded-lg">
                     <h1 className='font-bold dark:text-gray-100 text-xl text-center'>
                         Welcome back
                         <span className="block dark:text-gray-300">We're so excited to see you again!</span>
@@ -19,7 +21,7 @@ function Login() {
                         </div>
 
                         <p className="text-lg dark:text-gray-300 text-center">
-                            Don't have an account yet? <a href="#" className="text-rose-600 dark:text-rose-500 hover:underline">Sign up</a>
+                            Don't have an account yet? <Link to="/sign-up" className="text-rose-600 dark:text-rose-500 hover:underline">Sign up</Link>
                         </p>
 
                         <button className="bg-rose-600 text-white w-full py-2 rounded-md" type="submit">Sign in</button>
