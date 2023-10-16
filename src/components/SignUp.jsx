@@ -41,7 +41,7 @@ function SignUp() {
                     <a href="https://github.com/brajpatel" target="_blank" className="md:hidden flex flex-col items-center justify-center text-2xl font-semibold text-gray-900 dark:text-gray-50">
                         <img className="w-40 h-40" src="/logo.png" alt="logo"/>
                     </a>
-                    <h1 className='font-bold dark:text-gray-100 text-xl text-center'>Create an account</h1>
+                    <h1 className='font-bold dark:text-gray-100 text-xl lg:text-2xl lg:underline text-center'>Create an account</h1>
                     <form className="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="username">Username</label>
