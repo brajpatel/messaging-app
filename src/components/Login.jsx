@@ -4,10 +4,9 @@ function Login() {
             <div className="flex items-center justify-center gap-10 px-6 mx-auto lg:py-0">
                 <div className="bg-white dark:bg-gray-800 shadow p-6 space-y-4 w-full mt-8 md:w-1/2 md:mt-12 lg:w-1/3 md:space-y-6 sm:p-8 rounded-lg">
                     <h1 className='font-bold dark:text-gray-100 text-xl text-center'>
-                        Welcome back!
+                        Welcome back
                         <span className="block dark:text-gray-300">We're so excited to see you again!</span>
                     </h1>
-
                     <form className="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="email">Your email</label>
