@@ -5,7 +5,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
@@ -43,7 +43,10 @@ function App() {
               <Route path='*' element={<Navigate to="/login"/>}/>
             </>
           ) : (
-            <Route path='/' element={<div>signed in</div>}/>
+            <>
+              <Route path='/' element={<div>signed in</div>}/>
+              <Route path='*' element={<div>404 Not Found</div>}/>
+            </>
           )}
         </Routes>
       </BrowserRouter>
