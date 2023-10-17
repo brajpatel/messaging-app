@@ -17,12 +17,12 @@ function Login() {
                     <form className="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="email">Your email</label>
-                            <input className='block text-lg w-full px-4 py-2 mt-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="email" name="email" id="email" placeholder="name@company.com" required=""/>
+                            <input className='block text-lg w-full px-4 py-2 mt-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="email" name="email" id="email" placeholder="name@company.com" required/>
                         </div>
 
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="password">Password</label>
-                            <input className='block text-lg w-full px-4 py-2 mt-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="password" name="password" id="password" placeholder="••••••••••••" required=""/>
+                            <input className='block text-lg w-full px-4 py-2 mt-2 border-2 focus:outline-none focus:border-rose-500 rounded-md' type="password" name="password" id="password" placeholder="••••••••••••" required/>
                         </div>
 
                         <p className="text-lg dark:text-gray-300 text-center">
