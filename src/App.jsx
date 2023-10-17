@@ -13,7 +13,7 @@ function App() {
       setTheme('dark');
     }
     else {
-      setTheme('light');
+      setTheme('dark');
     }
   }, [])
 
