@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
@@ -35,6 +36,8 @@ function App() {
   return (
     <div className='bg-gray-100 dark:bg-gray-900'>
       <BrowserRouter>
+        {user && <Navbar/>}
+
         <Routes>
           {!user ? (
             <>
