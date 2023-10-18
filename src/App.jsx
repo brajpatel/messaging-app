@@ -3,11 +3,11 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 
 function App() {
-  const [user, setUser] = useState(null);
   const [theme, setTheme] = useState(null);
+  const [user, setUser] = useState(true);
 
   useEffect(() => {
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className='bg-gray-100 dark:bg-gray-900'>
       <BrowserRouter>
-        {user && <Navbar/>}
+        {user && <Sidebar/>}
 
         <Routes>
           {!user ? (
