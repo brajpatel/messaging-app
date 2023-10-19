@@ -7,7 +7,7 @@ import Sidebar from './components/Sidebar';
 
 function App() {
   const [theme, setTheme] = useState(null);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
 
   useEffect(() => {
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
@@ -47,7 +47,7 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={<div>signed in</div>}/>
+              <Route path='/' element={<div className='w-3/4'>signed in</div>}/>
               <Route path='*' element={<div>404 Not Found</div>}/>
             </>
           )}
