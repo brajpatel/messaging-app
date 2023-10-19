@@ -58,11 +58,6 @@ function SignUp() {
                             <input className='bg-white dark:bg-zinc-700 block text-lg text-black dark:text-zinc-100 w-full px-4 py-2 mt-2 border-2 border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-rose-500 dark:focus:border-rose-500 rounded-md' type="password" name="password" id="password" placeholder="••••••••••••" required/>
                         </div>
 
-                        <div>
-                            <label className="text-lg dark:text-zinc-100" htmlFor="profile_picture">Profile Picture (url)</label>
-                            <input className='bg-white dark:bg-zinc-700 block text-lg text-black dark:text-zinc-100 w-full px-4 py-2 mt-2 border-2 border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-rose-500 dark:focus:border-rose-500 rounded-md' type="text" name="profile_picture" id="profile_picture" placeholder="ଘ(੭˃ᴗ˂)੭" required/>
-                        </div>
-
                         <p className="text-lg dark:text-zinc-300 text-center">
                             Already have an account? <Link to="/login" className="text-rose-600 dark:text-rose-500 hover:underline">Login</Link>
                         </p>
