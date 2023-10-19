@@ -34,7 +34,7 @@ function App() {
   }
   
   return (
-    <div className='h-screen bg-gray-100 dark:bg-zinc-900'>
+    <div className='h-screen bg-zinx-100 dark:bg-zinc-900'>
       <BrowserRouter>
         {user && <Sidebar handleTheme={handleTheme}/>}
 

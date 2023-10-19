@@ -67,7 +67,7 @@ function SignUp() {
                             Already have an account? <Link to="/login" className="text-rose-600 dark:text-rose-500 hover:underline">Login</Link>
                         </p>
 
-                        <button className="bg-rose-600 text-white w-full py-2 rounded-md" type="submit">Sign in</button>
+                        <button className="bg-rose-600 hover:bg-rose-500 dark:hover:bg-rose-700 text-white w-full py-2 rounded-md" type="submit">Sign in</button>
                     </form>
                 </div>
             </div>
