@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function SignUp() {
     return (
-        <section className="bg-zinc-50 dark:bg-zinc-900 h-screen">
+        <section className="bg-zinc-50 dark:bg-zinc-900 h-full pb-4 sm:pb-0">
             <div className="flex items-center justify-center gap-6 px-6 mx-auto lg:py-0">
                 <div className="hidden md:flex flex-col items-center md:w-2/5">
                     <a href="https://github.com/brajpatel" target="_blank" className="flex items-center text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
