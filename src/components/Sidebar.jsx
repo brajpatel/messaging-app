@@ -1,6 +1,6 @@
 function Sidebar() {
     return (
-        <nav className="h-screen w-1/4 bg-rose-600 text-zinc-50">
+        <nav className="h-screen w-1/4 bg-rose-300 text-zinc-50">
             <ul>
                 <li>Hello, [user] --------------------------------------------------- Profile picture</li>
                 <li>.</li>

@@ -34,7 +34,7 @@ function App() {
   }
   
   return (
-    <div className='bg-gray-100 dark:bg-gray-900'>
+    <>
       <BrowserRouter>
         {user && <Sidebar/>}
 
@@ -53,7 +53,7 @@ function App() {
           )}
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   )
 }
 
