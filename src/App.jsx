@@ -7,7 +7,7 @@ import Sidebar from './components/Sidebar';
 
 function App() {
   const [theme, setTheme] = useState(null);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
@@ -34,9 +34,9 @@ function App() {
   }
   
   return (
-    <>
+    <div className='h-screen bg-gray-100 dark:bg-zinc-900'>
       <BrowserRouter>
-        {user && <Sidebar/>}
+        {user && <Sidebar handleTheme={handleTheme}/>}
 
         <Routes>
           {!user ? (
@@ -53,7 +53,7 @@ function App() {
           )}
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 

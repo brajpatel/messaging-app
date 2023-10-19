@@ -1,4 +1,4 @@
-function Sidebar() {
+function Sidebar({ handleTheme }) {
     return (
         <nav className="h-screen w-1/4 bg-rose-300 text-zinc-50">
             <ul>
