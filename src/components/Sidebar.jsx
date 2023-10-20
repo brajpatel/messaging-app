@@ -6,6 +6,17 @@ function Sidebar({ theme, handleTheme }) {
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown);
+
+        const dropdown = document.querySelector('.dropdown');
+
+        if(showDropdown)  {
+            dropdown.classList.add('right-0')
+            dropdown.classList.remove('right-full');
+        }
+        else  {
+            dropdown.classList.add('right-full')
+            dropdown.classList.remove('right-0');
+        }
     }
 
     return (
@@ -14,25 +25,24 @@ function Sidebar({ theme, handleTheme }) {
                 <p className="text-zinc-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <div className="h-16 w-16 bg-zinc-300 border-2 border-zinc-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
 
-                {showDropdown && (
-                    <div className="w-32 absolute top-full right-2 mt-2 flex flex-col bg-white border-2 border-rose-600 text-lg shadow rounded-md overflow-hidden z-10">
-                        <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 cursor-pointer" onClick={handleTheme}>
-                            { theme === 'light' ?
-                                <i className="fa-regular fa-moon ml-2"></i>
-                                :
-                                <i className="fa-regular fa-sun ml-2"></i>
-                            }
-                        </p>
-                        <Link to="/user_name" className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 cursor-pointer">
-                            Profile
-                            <i className="fa-regular fa-user ml-2"></i>
-                        </Link>
-                        <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 cursor-pointer">
-                            Logout
-                            <i className="fa-solid fa-door-open ml-2"></i>
-                        </p>
-                    </div>
-                )}  
+                <div className="dropdown transition-all w-full absolute top-full right-full flex flex-col bg-white border-2 border-rose-600 dark:border-zinc-800 text-lg shadow overflow-hidden z-10">
+                    <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-50 cursor-pointer" onClick={handleTheme}>
+                        Change Theme
+                        { theme === 'light' ?
+                            <i className="fa-regular fa-moon ml-2"></i>
+                            :
+                            <i className="fa-regular fa-sun ml-2"></i>
+                        }
+                    </p>
+                    <Link to="/user_name" className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 border-y-2 border-rose-600 dark:border-zinc-700 hover:text-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-50 cursor-pointer" onClick={handleDropdown}>
+                        Profile
+                        <i className="fa-regular fa-user ml-2"></i>
+                    </Link>
+                    <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-50 cursor-pointer">
+                        Logout
+                        <i className="fa-solid fa-door-open ml-2"></i>
+                    </p>
+                </div>
             </div>
 
             <ul className="text-zinc-900 dark:text-zinc-50">
