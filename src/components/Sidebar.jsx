@@ -1,15 +1,29 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function Sidebar({ handleTheme }) {
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const handleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    }
+
     return (
         <nav className="h-screen w-1/4 flex flex-col shadow-lg dark:shadow-none bg-white">
-            <div className="flex justify-between items-center px-2 py-2 bg-rose-600">
-                <a href="https://github.com/brajpatel" target="_blank" className="flex flex-col items-center justify-center text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
-                        <img className="w-16 h-16" src="/logo.png" alt="logo"/>
-                </a>
+            <div className="relative flex justify-between items-center px-6 py-2 bg-rose-600">
+                <p className="text-zinc-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
+                <div className="h-16 w-16 bg-rose-400 border-2 border-zinc-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
 
-                <div className="flex items-center gap-4">
-                    <p className="text-zinc-50">[USER]</p>
-                    <div className="h-16 w-16 border-2 border-zinc-50 rounded-full"></div>
-                </div>
+                {showDropdown && (
+                    <div className="w-32 absolute top-full right-2 mt-2 flex flex-col bg-white border-2 border-rose-600 shadow rounded-md overflow-hidden z-10">
+                        <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 cursor-pointer">
+                            Theme
+                            {/* { theme === 'light' ? '' : ''} */}
+                        </p>
+                        <Link to="/user_name" className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 cursor-pointer">Profile</Link>
+                        <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 cursor-pointer">Logout</p>
+                    </div>
+                )}  
             </div>
 
             <ul>
@@ -31,7 +45,6 @@ function Sidebar({ handleTheme }) {
                 </li>
                 <li>SEARCH (goes to search page)</li>
             </ul>
-            <p>bruh</p>
         </nav>
     )
 }
