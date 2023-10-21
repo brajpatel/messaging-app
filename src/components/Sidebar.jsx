@@ -21,7 +21,7 @@ function Sidebar({ theme, handleTheme }) {
 
     return (
         <nav className="h-screen w-96 flex flex-col shadow-lg dark:shadow-none bg-white dark:bg-zinc-900">
-            <div className="h-1/10 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-800">
+            <div className="h-[10%] relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-800">
                 <p className="text-zinc-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <div className="h-16 w-16 bg-zinc-300 border-2 border-zinc-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
 
@@ -63,8 +63,11 @@ function Sidebar({ theme, handleTheme }) {
                 </li>
             </div>
 
-            <div className="h-1/10 flex items-center justify-center bg-rose-600">
-                <li className="h-full">SEARCH (goes to search page)</li>
+            <div className="h-[10%] flex items-center justify-center bg-rose-600">
+                <Link to="/search" className="h-full">
+                    Search
+                    <i className="fa-solid fa-magnifying-glass ml-2"></i>
+                </Link>
             </div>
         </nav>
     )
