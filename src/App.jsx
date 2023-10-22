@@ -34,7 +34,7 @@ function App() {
   }
   
   return (
-    <div className={user ? 'h-screen flex bg-zinc-100 dark:bg-zinc-900' : 'h-screen bg-zinc-100 dark:bg-zinc-900'}>
+    <div className={user ? 'h-screen flex flex-col md:flex-row bg-zinc-100 dark:bg-zinc-300' : 'h-screen bg-zinc-100 dark:bg-zinc-900'}>
       <BrowserRouter>
         {user && <Sidebar theme={theme} handleTheme={handleTheme}/>}
 
