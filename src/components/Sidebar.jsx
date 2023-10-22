@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar({ theme, handleTheme }) {
     const [showDropdown, setShowDropdown] = useState(false);
+    const [friends, setFriends] = useState([]);
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown);
@@ -21,7 +22,7 @@ function Sidebar({ theme, handleTheme }) {
 
     return (
         <nav className="h-screen w-full lg:w-96 float-left flex flex-col shadow-lg dark:shadow-none bg-white dark:bg-zinc-800">
-            <div className="h-[10%] relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-700">
+            <div className="h-20 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-700">
                 <p className="text-zinc-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <div className="h-16 w-16 bg-zinc-300 dark:bg-zinc-500 border-2 border-zinc-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
 
@@ -51,16 +52,14 @@ function Sidebar({ theme, handleTheme }) {
                 </div>
             </div>
 
-            <div className="h-4/5 shadow-inner dark:text-zinc-50">
-                <h2>Friends</h2>
-                <li>.</li>
-                <li>If no friends</li>
-                <li>No friends yet, add some</li>
-                <li>.</li>
-                <li>else</li>
-                <li>Friend profile picture ----- friend name
-                    <span className="block opacity-90">status message</span>
-                </li>
+            <div className="h-4/5 py-4  dark:text-zinc-50">
+                {friends.length ? (
+                    <li>Friend profile picture ----- friend name
+                        <span className="block opacity-90">status message</span>
+                    </li>
+                ) : (
+                    <p>No Friends yet, add some</p>
+                )}
             </div>
 
             <div className="h-[10%] flex items-center justify-center border-t-2 border-rose-600 dark:border-zinc-700">
