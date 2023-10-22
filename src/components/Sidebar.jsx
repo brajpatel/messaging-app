@@ -58,7 +58,10 @@ function Sidebar({ theme, handleTheme }) {
                         <span className="block opacity-90">status message</span>
                     </li>
                 ) : (
-                    <p>No Friends yet, add some</p>
+                    <div className="h-full flex flex-col justify-center items-center gap-2 text-center px-4">
+                        <i class="fa-solid fa-dove text-[5rem] text-zinc-900 dark:text-zinc-50"></i>
+                        <p className="text-lg text-zinc-900 dark:text-zinc-50">It doesn't look like you've added any friends yet... Click the search button below and find people to say hello to!</p>
+                    </div>
                 )}
             </div>
 
