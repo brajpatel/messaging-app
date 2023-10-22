@@ -34,7 +34,7 @@ function App() {
   }
   
   return (
-    <div className={user ? 'h-screen flex flex-col md:block bg-zinc-100 dark:bg-zinc-700' : 'h-screen bg-zinc-100 dark:bg-zinc-900'}>
+    <div className={user ? 'h-screen flex flex-col lg:block bg-zinc-100 dark:bg-zinc-700' : 'h-screen bg-zinc-100 dark:bg-zinc-900'}>
       <BrowserRouter>
         {user && <Sidebar theme={theme} handleTheme={handleTheme}/>}
 
@@ -47,7 +47,7 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <div className='w-auto overflow-hidden bg-white dark:bg-zinc-800'>signed in</div> }/>
+              <Route path='/' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800'>signed in</div> }/>
               <Route path='/search' element={ <div>Search Page</div> }/>
               <Route path='/user_name' element={ <div>User Profile</div> }/>
               <Route path='*' element={ <div>404 Not Found</div> }/>
