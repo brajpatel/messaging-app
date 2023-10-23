@@ -53,11 +53,13 @@ function Sidebar({ theme, handleTheme }) {
                 </div>
             </div>
 
-            <div className="h-4/5 py-4  dark:text-zinc-50">
-                {friends.length ? (
-                    <li>Friend profile picture ----- friend name
-                        <span className="block opacity-90">status message</span>
-                    </li>
+            <div className="h-4/5 px-2 py-4 dark:text-zinc-50">
+                {!friends.length ? (
+                    <ul>
+                        <li>Friend profile picture ----- friend name
+                            <span className="block opacity-90">status message</span>
+                        </li>
+                    </ul>
                 ) : (
                     <div className="h-full flex flex-col justify-center items-center gap-2 text-center px-4">
                         <LuBird className="fa-solid fa-dove text-[5rem] text-zinc-900 dark:text-zinc-50"></LuBird>
