@@ -23,7 +23,7 @@ function Sidebar({ theme, handleTheme }) {
 
     return (
         <nav className="h-screen w-full lg:w-96 float-left flex flex-col bg-white dark:bg-zinc-800 border-r-2 border-rose-600 dark:border-zinc-700">
-            <div className="h-20 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-700">
+            <div className="h-20 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-700 shadow shadow-rose-500 dark:shadow-none">
                 <p className="text-zinc-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <div className="h-16 w-16 bg-zinc-300 dark:bg-zinc-500 border-2 border-zinc-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
 
@@ -60,7 +60,7 @@ function Sidebar({ theme, handleTheme }) {
                     </li>
                 ) : (
                     <div className="h-full flex flex-col justify-center items-center gap-2 text-center px-4">
-                        <LuBird class="fa-solid fa-dove text-[5rem] text-zinc-900 dark:text-zinc-50"></LuBird>
+                        <LuBird className="fa-solid fa-dove text-[5rem] text-zinc-900 dark:text-zinc-50"></LuBird>
                         <p className="text-lg text-zinc-900 dark:text-zinc-50">It doesn't look like you've added any friends yet... Click the search button below to start finding people to say hello to!</p>
                     </div>
                 )}

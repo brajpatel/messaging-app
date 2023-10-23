@@ -47,10 +47,10 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800'>signed in</div> }/>
-              <Route path='/search' element={ <div>Search Page</div> }/>
-              <Route path='/user_name' element={ <div>User Profile</div> }/>
-              <Route path='*' element={ <div>404 Not Found</div> }/>
+              <Route path='/' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>signed in</div> }/>
+              <Route path='/search' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>Search Page</div> }/>
+              <Route path='/user_name' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>User Profile</div> }/>
+              <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>404 Not Found</div> }/>
             </>
           )}
         </Routes>
