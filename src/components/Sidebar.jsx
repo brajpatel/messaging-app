@@ -70,7 +70,7 @@ function Sidebar({ theme, handleTheme }) {
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap overflow-auto">
                         {friends.map((friend) => {
                             return (
-                                <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-700 border border-rose-600 dark:border-zinc-700 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(190,190,190)] dark:hover:shadow-[0_4px_10px_rgb(30,30,30)] cursor-pointer">
+                                <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-700 border border-rose-600 dark:border-zinc-800 transition-all hover:border-white dark:hover:border-zinc-700 hover:shadow-[0_4px_10px_rgb(190,190,190)] dark:hover:shadow-[0_4px_10px_rgb(30,30,30)] cursor-pointer">
                                     <img className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
                                     <div>
                                         <p>{friend.username}</p>
