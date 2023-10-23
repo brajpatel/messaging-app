@@ -23,12 +23,12 @@ function Sidebar({ theme, handleTheme }) {
 
     return (
         <nav className="h-screen w-full lg:w-96 float-left flex flex-col bg-white dark:bg-zinc-800 border-r-2 border-rose-600 dark:border-zinc-700">
-            <div className="h-20 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-700 shadow shadow-rose-500 dark:shadow-none">
+            <div className="h-20 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-zinc-700">
                 <p className="text-zinc-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <div className="h-16 w-16 bg-zinc-300 dark:bg-zinc-500 border-2 border-zinc-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
 
                 <div className="dropdown transition-all w-full absolute top-full right-full flex flex-col pt-px bg-white dark:bg-zinc-800 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-zinc-800 text-lg shadow-md overflow-hidden z-10">
-                    <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-50 cursor-pointer" onClick={handleTheme}>
+                    <p className="h-full w-full px-4 py-3 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-50 cursor-pointer" onClick={handleTheme}>
                         Change Theme
                         { theme === 'light' ?
                             <i className="fa-regular fa-moon ml-2"></i>
@@ -39,25 +39,46 @@ function Sidebar({ theme, handleTheme }) {
 
                     <hr className="border-1 border-rose-600 dark:border-zinc-800"/>
 
-                    <Link to="/user_name" className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-50 cursor-pointer" onClick={handleDropdown}>
+                    <Link to="/user_name" className="h-full w-full px-4 py-3 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-50 cursor-pointer" onClick={handleDropdown}>
                         Profile
                         <i className="fa-regular fa-user ml-2"></i>
                     </Link>
                     
                     <hr className="border-1 border-rose-600 dark:border-zinc-800"/>
                     
-                    <p className="h-full w-full px-4 py-2 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-50 cursor-pointer">
+                    <p className="h-full w-full px-4 py-3 text-center hover:bg-rose-600 hover:text-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-50 cursor-pointer">
                         Logout
                         <i className="fa-solid fa-door-open ml-2"></i>
                     </p>
                 </div>
             </div>
 
-            <div className="h-4/5 px-2 py-4 dark:text-zinc-50">
+            <div className="h-4/5 dark:text-zinc-50">
                 {!friends.length ? (
-                    <ul>
-                        <li>Friend profile picture ----- friend name
-                            <span className="block opacity-90">status message</span>
+                    //  shadow-[inset_0_0_10px_rgb(180,180,180)]
+                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap overflow-auto">
+                        <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-600 border border-rose-600 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] cursor-pointer">
+                            <div className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full"></div>
+                            <div>
+                                <p>Friend Name</p>
+                                <p>Status Message</p>
+                            </div>
+                        </li>
+
+                        <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-600 border border-rose-600 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] cursor-pointer">
+                            <div className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full"></div>
+                            <div>
+                                <p>Friend Name</p>
+                                <p>Status Message</p>
+                            </div>
+                        </li>
+
+                        <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-600 border border-rose-600 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] cursor-pointer">
+                            <div className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full"></div>
+                            <div>
+                                <p>Friend Name</p>
+                                <p>Status Message</p>
+                            </div>
                         </li>
                     </ul>
                 ) : (
