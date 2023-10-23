@@ -4,7 +4,18 @@ import { LuBird } from 'react-icons/lu';
 
 function Sidebar({ theme, handleTheme }) {
     const [showDropdown, setShowDropdown] = useState(false);
-    const [friends, setFriends] = useState([]);
+    const [friends, setFriends] = useState([
+        {
+            username: 'Neeko',
+            status_message: 'Neeko is best decision',
+            profile_picture: 'https://static.zerochan.net/Neeko.%28League.of.Legends%29.full.3688255.jpg'
+        },
+        {
+            username: 'Morgana',
+            status_message: 'Let me show you what it is to fall',
+            profile_picture: 'https://static.zerochan.net/Morgana.%28League.of.Legends%29.full.3708469.jpg'
+        }
+    ]);
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown);
@@ -54,32 +65,20 @@ function Sidebar({ theme, handleTheme }) {
             </div>
 
             <div className="h-4/5 dark:text-zinc-50">
-                {!friends.length ? (
+                {friends.length ? (
                     //  shadow-[inset_0_0_10px_rgb(180,180,180)]
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap overflow-auto">
-                        <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-600 border border-rose-600 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] cursor-pointer">
-                            <div className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full"></div>
-                            <div>
-                                <p>Friend Name</p>
-                                <p>Status Message</p>
-                            </div>
-                        </li>
-
-                        <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-600 border border-rose-600 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] cursor-pointer">
-                            <div className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full"></div>
-                            <div>
-                                <p>Friend Name</p>
-                                <p>Status Message</p>
-                            </div>
-                        </li>
-
-                        <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-600 border border-rose-600 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] cursor-pointer">
-                            <div className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full"></div>
-                            <div>
-                                <p>Friend Name</p>
-                                <p>Status Message</p>
-                            </div>
-                        </li>
+                        {friends.map((friend) => {
+                            return (
+                                <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-zinc-700 border border-rose-600 dark:border-zinc-700 transition-all hover:border-white hover:shadow-[0_4px_10px_rgb(210,210,210)] dark:hover:shadow-[0_4px_10px_rgb(30,30,30)] cursor-pointer">
+                                    <img className="h-16 w-16 bg-zinc-100 dark:bg-zinc-500 border border-rose-600 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
+                                    <div>
+                                        <p>{friend.username}</p>
+                                        <p>{friend.status_message}</p>
+                                    </div>
+                                </li>
+                            )
+                        })}
                     </ul>
                 ) : (
                     <div className="h-full flex flex-col justify-center items-center gap-2 text-center px-4">
