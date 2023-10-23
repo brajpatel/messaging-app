@@ -34,7 +34,7 @@ function App() {
   }
   
   return (
-    <div className={user ? 'h-screen flex flex-col lg:block bg-zinc-100 dark:bg-zinc-700' : 'h-screen bg-zinc-100 dark:bg-zinc-900'}>
+    <div className={user ? 'h-screen flex flex-col lg:block bg-gray-100 dark:bg-gray-700' : 'h-screen bg-gray-100 dark:bg-gray-900'}>
       <BrowserRouter>
         {user && <Sidebar theme={theme} handleTheme={handleTheme}/>}
 
@@ -47,10 +47,10 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>signed in</div> }/>
-              <Route path='/search' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>Search Page</div> }/>
-              <Route path='/user_name' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>User Profile</div> }/>
-              <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50'>404 Not Found</div> }/>
+              <Route path='/' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>signed in</div> }/>
+              <Route path='/search' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>Search Page</div> }/>
+              <Route path='/user_name' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>User Profile</div> }/>
+              <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
             </>
           )}
         </Routes>
