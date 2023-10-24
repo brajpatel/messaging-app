@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Sidebar from './components/Sidebar';
+import SignedIn from './components/SignedIn';
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -47,7 +48,7 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>signed in</div> }/>
+              <Route path='/' element={ <SignedIn/> }/>
               <Route path='/search' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>Search Page</div> }/>
               <Route path='/user_name' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>User Profile</div> }/>
               <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
