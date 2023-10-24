@@ -33,13 +33,13 @@ function Sidebar({ theme, handleTheme }) {
     }
 
     return (
-        <nav className="h-screen w-full lg:w-96 float-left flex flex-col bg-white dark:bg-gray-800 border-r-2 border-rose-600 dark:border-gray-700">
-            <div className="h-20 relative flex justify-between items-center px-6 py-2 bg-rose-600 dark:bg-gray-700">
-                <p className="text-gray-50 text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
-                <div className="h-16 w-16 bg-gray-300 dark:bg-gray-500 border-2 border-gray-50 rounded-full cursor-pointer" onClick={handleDropdown}></div>
+        <nav className="h-screen w-full lg:w-96 float-left flex flex-col bg-white dark:bg-gray-800 lg:border-r-2 border-rose-600 dark:border-gray-700">
+            <div className="h-16 md:h-18 lg:h-20 relative flex justify-between items-center px-6 md:py-6 lg:py-4 bg-rose-600 dark:bg-gray-700">
+                <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
+                <div className="h-12 w-20 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-md md:rounded-full bg-gray-300 dark:bg-gray-500 border-2 border-gray-50 cursor-pointer" onClick={handleDropdown}></div>
 
                 <div className="dropdown transition-all w-full absolute top-full right-full flex flex-col pt-px bg-white dark:bg-gray-800 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-gray-800 text-lg shadow-md overflow-hidden z-10">
-                    <p className="h-full w-full px-4 py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleTheme}>
+                    <p className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleTheme}>
                         Change Theme
                         { theme === 'light' ?
                             <i className="fa-regular fa-moon ml-2"></i>
@@ -50,14 +50,14 @@ function Sidebar({ theme, handleTheme }) {
 
                     <hr className="border-1 border-rose-600 dark:border-gray-800"/>
 
-                    <Link to="/user_name" className="h-full w-full px-4 py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleDropdown}>
+                    <Link to="/user_name" className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleDropdown}>
                         Profile
                         <i className="fa-regular fa-user ml-2"></i>
                     </Link>
                     
                     <hr className="border-1 border-rose-600 dark:border-gray-800"/>
                     
-                    <p className="h-full w-full px-4 py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer">
+                    <p className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer">
                         Logout
                         <i className="fa-solid fa-door-open ml-2"></i>
                     </p>
@@ -68,10 +68,10 @@ function Sidebar({ theme, handleTheme }) {
                 {friends.length ? (
                     //  shadow-[inset_0_0_10px_rgb(180,180,180)]
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap overflow-auto">
-                        {friends.map((friend) => {
+                        {friends.map((friend, index) => {
                             return (
-                                <li className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 p-4 bg-white dark:bg-gray-700 border border-rose-600 dark:border-gray-800 transition-all hover:border-white dark:hover:border-gray-700 hover:shadow-[0_2px_6px_rgb(190,190,190)] dark:hover:shadow-[0_2px_6px_rgb(30,30,30)] cursor-pointer">
-                                    <img className="h-16 w-16 bg-gray-100 dark:bg-gray-500 border border-rose-600 dark:border-gray-800 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
+                                <li key={index} className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 px-4 py-3 bg-white dark:bg-gray-700 border border-rose-600 dark:border-gray-800 transition-all hover:border-white dark:hover:border-gray-700 hover:shadow-[0_2px_6px_rgb(190,190,190)] dark:hover:shadow-[0_2px_6px_rgb(30,30,30)] cursor-pointer">
+                                    <img className="h-10 w-10 lg:h-16 lg:w-16 bg-gray-100 dark:bg-gray-500 border border-rose-600 dark:border-gray-800 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
                                     <div>
                                         <p className="text-lg font-bold">{friend.username}</p>
                                         <p className="opacity-80">{friend.status_message}</p>
