@@ -67,10 +67,10 @@ function Sidebar({ theme, handleTheme }) {
             <div className="h-4/5 dark:text-gray-50">
                 {friends.length ? (
                     //  shadow-[inset_0_0_10px_rgb(180,180,180)]
-                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap overflow-auto">
+                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-auto">
                         {friends.map((friend, index) => {
                             return (
-                                <li key={index} className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 px-4 py-3 bg-white dark:bg-gray-700 border border-rose-600 dark:border-gray-800 transition-all hover:border-white dark:hover:border-gray-700 hover:shadow-[0_2px_6px_rgb(190,190,190)] dark:hover:shadow-[0_2px_6px_rgb(30,30,30)] cursor-pointer">
+                                <li key={index} className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 px-4 py-3 md:py-4 bg-white dark:bg-gray-700 border border-rose-600 dark:border-gray-800 transition-all hover:border-white dark:hover:border-gray-700 hover:shadow-[0_2px_6px_rgb(190,190,190)] dark:hover:shadow-[0_2px_6px_rgb(30,30,30)] cursor-pointer">
                                     <img className="h-10 w-10 lg:h-16 lg:w-16 bg-gray-100 dark:bg-gray-500 border border-rose-600 dark:border-gray-800 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
                                     <div>
                                         <p className="lg:text-lg font-bold">{friend.username}</p>
