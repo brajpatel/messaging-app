@@ -71,14 +71,13 @@ function Sidebar({ theme, handleTheme }) {
 
             <div className="h-4/5 dark:text-gray-50">
                 {friends.length ? (
-                    //  shadow-[inset_0_0_10px_rgb(180,180,180)]
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
                             return (
                                 <li key={index} className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 px-4 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-500 cursor-pointer">
                                     <img className="h-12 w-12 md:h-16 md:w-16 bg-gray-100 dark:bg-gray-500 border border-rose-600 dark:border-gray-800 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
                                     <div className="overflow-hidden">
-                                        <p className="lg:text-lg font-bold">{friend.username}</p>
+                                        <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>
                                         <p className="opacity-80 overflow-hidden whitespace-nowrap text-ellipsis">{friend.status_message}</p>
                                     </div>
                                 </li>
