@@ -7,17 +7,17 @@ function Sidebar({ theme, handleTheme }) {
     const [friends, setFriends] = useState([
         {
             username: 'Neeko',
-            status_message: 'Neeko is best decision',
+            status_message: 'Neeko is best decision!',
             profile_picture: 'https://static.zerochan.net/Neeko.%28League.of.Legends%29.full.3688255.jpg'
         },
         {
             username: 'Morgana',
-            status_message: 'Bing Chilling',
+            status_message: 'Support Slay',
             profile_picture: 'https://static.zerochan.net/Morgana.%28League.of.Legends%29.full.3708469.jpg'
         },
         {
             username: 'Kayle',
-            status_message: 'I am the Light',
+            status_message: 'I am the Light!',
             profile_picture: "https://i.pinimg.com/474x/c6/34/47/c63447bd8b594a51593e06d763084d37.jpg"
         }
     ]);
@@ -41,7 +41,7 @@ function Sidebar({ theme, handleTheme }) {
         <nav className="h-screen w-full lg:w-96 float-left flex flex-col bg-white dark:bg-gray-800 lg:border-r-2 border-rose-600 dark:border-gray-700">
             <div className="h-[4.4rem] md:h-[4.6rem] lg:h-20 relative flex justify-between items-center px-6 md:py-6 lg:py-3 xl:py-4 bg-rose-600 dark:bg-gray-700">
                 <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
-                <img className="h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-[4.2rem] lg:w-[4.2rem] rounded-full bg-gray-300 dark:bg-gray-500 border-2 border-gray-50 cursor-pointer" src="https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg" alt="user-profile-picture" onClick={handleDropdown}/>
+                <img className="h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-[4.2rem] lg:w-[4.2rem] rounded-full bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer" src="https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg" alt="user-profile-picture" onClick={handleDropdown}/>
 
                 <div className="dropdown transition-all w-full absolute top-full right-full flex flex-col pt-px bg-white dark:bg-gray-800 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-gray-800 text-lg shadow-md overflow-hidden z-10">
                     <p className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleTheme}>
@@ -72,14 +72,14 @@ function Sidebar({ theme, handleTheme }) {
             <div className="h-4/5 dark:text-gray-50">
                 {friends.length ? (
                     //  shadow-[inset_0_0_10px_rgb(180,180,180)]
-                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-auto">
+                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
                             return (
                                 <li key={index} className="w-full sm:w-auto lg:w-full rounded-lg flex gap-8 px-4 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-500 cursor-pointer">
                                     <img className="h-12 w-12 md:h-16 md:w-16 bg-gray-100 dark:bg-gray-500 border border-rose-600 dark:border-gray-800 rounded-full" src={friend.profile_picture} alt={`${friend.username}'s profile picture`}/>
-                                    <div>
+                                    <div className="overflow-hidden">
                                         <p className="lg:text-lg font-bold">{friend.username}</p>
-                                        <p className="opacity-80">{friend.status_message}</p>
+                                        <p className="opacity-80 overflow-hidden whitespace-nowrap text-ellipsis">{friend.status_message}</p>
                                     </div>
                                 </li>
                             )
