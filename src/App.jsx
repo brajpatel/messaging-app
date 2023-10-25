@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import Sidebar from './components/Sidebar';
 import SignedIn from './components/SignedIn';
 import Profile from './components/Profile';
+import SearchPage from './components/SearchPage';
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -51,7 +52,7 @@ function App() {
             <>
               <Route path='/' element={ <SignedIn/> }/>
               <Route path='/username' element={ <Profile/> }/>
-              <Route path='/search' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>Search Page</div> }/>
+              <Route path='/search' element={ <SearchPage/> }/>
               <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
             </>
           )}
@@ -61,4 +62,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
