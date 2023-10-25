@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LuBird } from 'react-icons/lu';
+import Dropdown from "./Dropdown";
 
 function Sidebar({ theme, handleTheme }) {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -43,30 +44,7 @@ function Sidebar({ theme, handleTheme }) {
                 <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <img className="h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-[4.2rem] lg:w-[4.2rem] rounded-full bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer" src="https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg" alt="user-profile-picture" onClick={handleDropdown}/>
 
-                <div className="dropdown transition-all w-full absolute top-full right-full flex flex-col pt-px bg-white dark:bg-gray-800 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-gray-800 text-lg shadow-md overflow-hidden z-10">
-                    <p className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleTheme}>
-                        Change Theme
-                        { theme === 'light' ?
-                            <i className="fa-regular fa-moon ml-2"></i>
-                            :
-                            <i className="fa-regular fa-sun ml-2"></i>
-                        }
-                    </p>
-
-                    <hr className="border-1 border-rose-600 dark:border-gray-800"/>
-
-                    <Link to="/user_name" className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer" onClick={handleDropdown}>
-                        Profile
-                        <i className="fa-regular fa-user ml-2"></i>
-                    </Link>
-                    
-                    <hr className="border-1 border-rose-600 dark:border-gray-800"/>
-                    
-                    <p className="h-full w-full py-2 lg:p-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-50 cursor-pointer">
-                        Logout
-                        <i className="fa-solid fa-door-open ml-2"></i>
-                    </p>
-                </div>
+                <Dropdown handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
             </div>
 
             <div className="h-4/5 dark:text-gray-50">
