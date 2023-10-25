@@ -3,16 +3,9 @@
     margin: 4rem 0;
 }
 
-.loader-bot,
-.loader-top-1,
-.loader-top-2 {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
 .loader-bot {
     height: 95px;
     width: 95px;
-    background: rgba(255, 255, 255, 0.1);
     animation: loaderBotRotate 6s ease infinite;
 }
 
@@ -40,7 +33,6 @@
 .loader-top-1 {
     height: 85px;
     width: 85px;
-    background: rgba(255, 255, 255, 0.15);
     top: 2.5px;
     left: 2.5px;
     animation: loaderTopRotate 3s ease infinite;
@@ -60,7 +52,6 @@
 .loader-top-2 {
     height: 60px;
     width: 60px;
-    background: rgba(255, 255, 255, 0.2);
     top: 15px;
     left: 15px;
 }
