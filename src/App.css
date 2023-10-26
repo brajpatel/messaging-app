@@ -8,3 +8,35 @@
   padding: 0;
   font-family: 'Barlow', sans-serif;
 }
+
+body {
+  overflow: hidden;
+}
+
+.search-page {
+  animation: page-enter 0.3s ease forwards;
+}
+
+@keyframes page-enter {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.search-page.exit {
+  animation: page-exit 0.3s ease forwards;
+}
+
+@keyframes page-exit {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}
