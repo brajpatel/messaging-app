@@ -17,7 +17,7 @@ function App() {
       setTheme('dark');
     }
     else {
-      setTheme('dark');
+      setTheme('light');
     }
   }, [])
 
