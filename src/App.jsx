@@ -10,14 +10,14 @@ import SearchPage from './components/SearchPage';
 
 function App() {
   const [theme, setTheme] = useState(null);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
 
   useEffect(() => {
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
       setTheme('dark');
     }
     else {
-      setTheme('light');
+      setTheme('dark');
     }
   }, [])
 
