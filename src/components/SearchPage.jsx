@@ -38,7 +38,6 @@ function SearchPage() {
         }
     ])
     const [searchedFriends, setSearchedFriends] = useState(friends);
-    const [searchValue, setSearchValue] = useState('');
 
     const handleSearch = (e) => {
         setSearchedFriends(friends.filter((friend) => {
@@ -66,28 +65,37 @@ function SearchPage() {
 
             <div className='w-full'>
                 <ul className="h-full w-full dark:text-gray-50 px-4 py-5 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 overflow-x-hidden overflow-y-auto">
-                        {searchedFriends.map((friend, index) => {
-                            return (
-                                <li key={index} className="relative w-full sm:w-auto lg:w-full rounded flex gap-6 px-4 pr-14 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-400">
-                                    <div className={`h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-16 lg:w-16 bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden`} style={{backgroundImage: `url(${friend.profile_picture})`}}></div>
+                    {searchedFriends.length ? (
+                        <>
+                            {searchedFriends.map((friend, index) => {
+                                return (
+                                    <li key={index} className="relative w-full sm:w-auto lg:w-full rounded flex gap-6 px-4 pr-14 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-400">
+                                        <div className={`h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-16 lg:w-16 bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden`} style={{backgroundImage: `url(${friend.profile_picture})`}}></div>
 
-                                    <div className="overflow-hidden">
-                                        <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>
-                                        <p className="opacity-80 overflow-hidden whitespace-nowrap text-ellipsis">{friend.status_message}</p>
-                                    </div>
+                                        <div className="overflow-hidden">
+                                            <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>
+                                            <p className="opacity-80 overflow-hidden whitespace-nowrap text-ellipsis">{friend.status_message}</p>
+                                        </div>
 
-                                    {friend.isFriend ? (
-                                        <div className='bg-red-500 hover:bg-red-400 dark:bg-red-600 dark:hover:bg-red-700 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer'>
-                                            <AiOutlineUserDelete/>
-                                        </div>
-                                        ) : (
-                                        <div className='bg-green-400 hover:bg-green-300 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer'>
-                                            <AiOutlineUserAdd/>
-                                        </div>
-                                    )}
-                                </li>
-                            )
-                        })}
+                                        {friend.isFriend ? (
+                                            <div className='bg-red-500 hover:bg-red-400 dark:bg-red-600 dark:hover:bg-red-700 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer'>
+                                                <AiOutlineUserDelete/>
+                                            </div>
+                                            ) : (
+                                            <div className='bg-green-400 hover:bg-green-300 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer'>
+                                                <AiOutlineUserAdd/>
+                                            </div>
+                                        )}
+                                    </li>
+                                )
+                            })}
+                        </>
+                    ) : (
+                        <div>
+                            <p>It doesn't look like there are any users with that name!</p>
+                            <p>Some image</p>
+                        </div>
+                    )}
                 </ul>
             </div>
                 
