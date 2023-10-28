@@ -25,17 +25,6 @@ function Sidebar({ theme, handleTheme }) {
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown);
-
-        const dropdown = document.querySelector('.dropdown');
-
-        if(showDropdown)  {
-            dropdown.classList.add('right-0')
-            dropdown.classList.remove('right-full');
-        }
-        else  {
-            dropdown.classList.add('right-full')
-            dropdown.classList.remove('right-0');
-        }
     }
 
     return (
@@ -44,7 +33,7 @@ function Sidebar({ theme, handleTheme }) {
                 <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
                 <img className="h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-[4.2rem] lg:w-[4.2rem] rounded-full bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer" src="https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg" alt="user-profile-picture" onClick={handleDropdown}/>
 
-                <Dropdown handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
+                <Dropdown showDropdown={showDropdown} handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
             </div>
 
             <div className="h-4/5 dark:text-gray-50">
