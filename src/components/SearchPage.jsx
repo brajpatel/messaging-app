@@ -69,10 +69,10 @@ function SearchPage() {
                         <>
                             {searchedFriends.map((friend, index) => {
                                 return (
-                                    <li key={index} className="relative w-full sm:w-auto lg:w-full rounded flex gap-6 px-4 pr-14 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-400">
-                                        <div className={`h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-16 lg:w-16 bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden`} style={{backgroundImage: `url(${friend.profile_picture})`}}></div>
+                                    <li key={index} className="relative w-full sm:w-auto rounded flex gap-6 px-4 pr-14 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-400">
+                                        <div className={`h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-16 lg:min-w-[4rem] bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full float-left overflow-hidden`} style={{backgroundImage: `url(${friend.profile_picture})`}}></div>
 
-                                        <div className="overflow-hidden">
+                                        <div className='float-none overflow-hidden'>
                                             <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>
                                             <p className="opacity-80 overflow-hidden whitespace-nowrap text-ellipsis">{friend.status_message}</p>
                                         </div>
