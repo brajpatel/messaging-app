@@ -41,7 +41,7 @@ function SearchPage() {
 
     const handleSearch = (e) => {
         setSearchedFriends(friends.filter((friend) => {
-            return friend.username.toLowerCase().startsWith(e.target.value)
+            return friend.username.toLowerCase().startsWith(e.target.value);
         }));
     }
 
