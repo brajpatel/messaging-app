@@ -82,7 +82,7 @@ function SearchPage() {
                                                 <AiOutlineUserDelete/>
                                             </div>
                                             ) : (
-                                            <div className='bg-green-400 hover:bg-green-300 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer'>
+                                            <div className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer'>
                                                 <AiOutlineUserAdd/>
                                             </div>
                                         )}
