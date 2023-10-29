@@ -94,6 +94,7 @@ function SearchPage() {
                         <div>
                             <p>It doesn't look like there are any users with that name!</p>
                             <p>Some image</p>
+                            <img className='fill-white' src="/not-found.svg" alt="could-not-find-any-users"/>
                         </div>
                     )}
                 </ul>
