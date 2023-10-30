@@ -31,7 +31,7 @@ function Sidebar({ theme, handleTheme }) {
         <nav className="h-screen w-full lg:w-[21rem] xl:w-96 float-left flex flex-col bg-white dark:bg-gray-800 lg:border-r-2 border-rose-600 dark:border-gray-700">
             <div className="h-[4.4rem] md:h-[4.6rem] lg:h-20 relative flex justify-between items-center px-6 md:py-6 lg:py-3 xl:py-4 bg-rose-600 dark:bg-gray-700">
                 <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
-                
+
                 <div className='h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-[4.2rem] lg:min-w-[4.2rem] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer rounded-full' style={{backgroundImage: 'url(https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg)'}} onClick={handleDropdown}></div>
 
                 <Dropdown showDropdown={showDropdown} handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
@@ -42,7 +42,7 @@ function Sidebar({ theme, handleTheme }) {
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
                             return (
-                                <li key={index} className="w-full sm:w-auto lg:w-full rounded flex gap-6 px-4 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-400 cursor-pointer">
+                                <li key={index} className="w-full sm:w-auto lg:w-full rounded flex gap-6 px-4 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-400 transition-all cursor-pointer">
                                     <div className={`relative h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-16 lg:w-16 bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden`} style={{backgroundImage: `url(${friend.profile_picture})`}}></div>
                                     <div className="overflow-hidden">
                                         <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>

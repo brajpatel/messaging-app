@@ -12,13 +12,13 @@ function Profile() {
                 <p className='text-lg lg:text-xl lg:underline'>Profile</p>
             </div>
             
-            <div className='flex flex-col items-center gap-3 md:flex-row px-2 py-4 text-gray-900 dark:text-gray-100'>
+            <div className='w-4/5 lg:w-[90%] flex flex-col items-center gap-4 sm:gap-5 md:gap-12 md:flex-row md:justify-center mx-auto mt-4 md:mt-10 px-4 py-8 md:py-10 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-400 rounded transition-colors'>
                 <div className='min-h-[40vw] min-w-[40vw] sm:min-h-[30vw] sm:min-w-[30vw] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-rose-500 dark:border-gray-200 transition-all rounded-full' style={{backgroundImage: 'url(https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg)'}}></div>
 
                 <div className='flex flex-col items-center'>
-                    <p>[USERNAME]</p>
-                    <p className='mt-2 mb-4'>[STATUS_MESSAGE]</p>
-                    <button className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl px-2 py-1 rounded outline-none' type='button'>Edit <i className="fa-regular fa-pen-to-square"></i></button>
+                    <p className='text-lg lg:text-xl font-bold'>[USERNAME]</p>
+                    <p className='lg:text-lg mt-2 mb-4'>[STATUS_MESSAGE]</p>
+                    <button className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl px-3 py-1 lg:px-4 lg:py-2 rounded outline-none' type='button'>Edit <i className="fa-regular fa-pen-to-square"></i></button>
                 </div>
             </div>
         </div>
