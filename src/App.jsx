@@ -52,6 +52,7 @@ function App() {
             <>
               <Route path='/' element={ <SignedIn/> }/>
               <Route path='/username' element={ <Profile/> }/>
+              <Route path='/username/edit' element={ <div>Edit profile</div> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
               <Route path=':chatId' element={ <div>Chat page</div> }/>
               <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
