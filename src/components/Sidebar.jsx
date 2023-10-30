@@ -31,7 +31,8 @@ function Sidebar({ theme, handleTheme }) {
         <nav className="h-screen w-full lg:w-[21rem] xl:w-96 float-left flex flex-col bg-white dark:bg-gray-800 lg:border-r-2 border-rose-600 dark:border-gray-700">
             <div className="h-[4.4rem] md:h-[4.6rem] lg:h-20 relative flex justify-between items-center px-6 md:py-6 lg:py-3 xl:py-4 bg-rose-600 dark:bg-gray-700">
                 <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
-                <img className="h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-[4.2rem] lg:w-[4.2rem] rounded-full bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer" src="https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg" alt="user-profile-picture" onClick={handleDropdown}/>
+                
+                <div className='h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-[4.2rem] lg:min-w-[4.2rem] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer rounded-full' style={{backgroundImage: 'url(https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg)'}} onClick={handleDropdown}></div>
 
                 <Dropdown showDropdown={showDropdown} handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
             </div>
