@@ -18,7 +18,7 @@ function Profile() {
                 <div className='flex flex-col items-center'>
                     <p className='text-lg lg:text-xl font-bold'>[USERNAME]</p>
                     <p className='lg:text-lg mt-2 mb-4'>[STATUS_MESSAGE]</p>
-                    <button className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl px-3 py-1 lg:px-4 lg:py-2 rounded outline-none' type='button'>Edit <i className="fa-regular fa-pen-to-square"></i></button>
+                    <Link to='/username/edit' className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl px-3 py-1 lg:px-4 lg:py-2 rounded outline-none'>Edit <i className="fa-regular fa-pen-to-square"></i></Link>
                 </div>
             </div>
         </div>
