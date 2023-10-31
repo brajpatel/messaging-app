@@ -38,7 +38,7 @@ function App() {
   }
   
   return (
-    <div className={user ? 'h-screen flex flex-col lg:block bg-gray-100 dark:bg-gray-700 overflow-hidden' : 'h-screen bg-gray-100 dark:bg-gray-900'}>
+    <div className={user ? 'h-screen flex flex-col lg:block dark:bg-gray-900 overflow-hidden' : 'h-screen bg-gray-100 dark:bg-gray-900'}>
       <BrowserRouter>
         {user && <Sidebar theme={theme} handleTheme={handleTheme}/>}
 
@@ -55,8 +55,8 @@ function App() {
               <Route path='/username' element={ <Profile/> }/>
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
-              <Route path=':chatId' element={ <div>Chat page</div> }/>
-              <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
+              <Route path='/chat/:chatId' element={ <div>Chat page</div> }/>
+              <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
             </>
           )}
         </Routes>

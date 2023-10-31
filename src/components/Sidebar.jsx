@@ -29,8 +29,8 @@ function Sidebar({ theme, handleTheme }) {
     }
 
     return (
-        <nav className="h-screen w-full lg:w-[21rem] xl:w-96 float-left flex flex-col bg-white dark:bg-gray-800 lg:border-r-2 border-rose-600 dark:border-gray-700">
-            <div className="h-[4.4rem] md:h-[4.6rem] lg:h-20 relative flex justify-between items-center px-6 md:py-6 lg:py-3 xl:py-4 bg-rose-600 dark:bg-gray-700">
+        <nav className="h-screen w-full lg:w-[21rem] xl:w-96 float-left flex flex-col bg-white dark:bg-gray-900 lg:border-r-2 border-rose-600 dark:border-gray-700">
+            <div className="h-[4.4rem] md:h-[4.6rem] lg:h-20 relative flex justify-between items-center px-6 md:py-6 lg:py-3 xl:py-4 bg-rose-600 dark:bg-gray-800">
                 <p className="text-gray-50 text-lg lg:text-xl">Greetings, <span className="font-bold">[USER]</span>.</p>
 
                 <div className='h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-[4.2rem] lg:min-w-[4.2rem] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer rounded-full' style={{backgroundImage: 'url(https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg)'}} onClick={handleDropdown}></div>
@@ -56,7 +56,7 @@ function Sidebar({ theme, handleTheme }) {
             </div>
 
             <div className="h-[10%] flex items-center justify-center border-t-2 border-rose-600 dark:border-gray-700">
-                <Link to="/search" className="bg-rose-600 hover:bg-rose-500 dark:bg-gray-700 dark:hover:bg-gray-600 px-4 py-2 text-gray-50 rounded-lg text-lg" onClick={() => setShowDropdown(false)}>
+                <Link to="/search" className="bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 text-gray-50 rounded-lg text-lg" onClick={() => setShowDropdown(false)}>
                     Search
                     <i className="fa-solid fa-magnifying-glass ml-2"></i>
                 </Link>
