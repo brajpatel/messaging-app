@@ -5,7 +5,7 @@ function SignUp() {
         <section className="bg-gray-50 dark:bg-gray-900 h-full pb-4 sm:pb-0">
             <div className="flex items-center justify-center gap-6 px-6 mx-auto lg:py-0">
                 <div className="hidden md:flex flex-col items-center md:w-2/5">
-                    <a href="https://github.com/brajpatel" target="_blank" className="flex items-center text-2xl font-semibold text-gray-900 dark:text-gray-50">
+                    <a href="https://github.com/brajpatel" target="_blank" className="flex items-center text-2xl font-bold dark:text-gray-50">
                         <img className="w-32 h-32" src="/logo.png" alt="logo"/>
                         Macaw
                     </a>
@@ -45,22 +45,22 @@ function SignUp() {
                     <form className="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="username">Username*</label>
-                            <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="text" name="username" id="username" placeholder="superDuperCoolKid9000" required/>
+                            <input className='bg-white dark:bg-gray-700 block text-lg dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="text" name="username" id="username" placeholder="superDuperCoolKid9000" required/>
                         </div>
 
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="email">Email*</label>
-                            <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="email" name="email" id="email" placeholder="your-name@email.com" required/>
+                            <input className='bg-white dark:bg-gray-700 block text-lg dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="email" name="email" id="email" placeholder="your-name@email.com" required/>
                         </div>
 
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="password">Password*</label>
-                            <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="password" name="password" id="password" placeholder="••••••••••••" required/>
+                            <input className='bg-white dark:bg-gray-700 block text-lg dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="password" name="password" id="password" placeholder="••••••••••••" required/>
                         </div>
 
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="confirm_password">Confirm Password*</label>
-                            <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="password" name="confirm_password" id="confirm_password" placeholder="••••••••••••" required/>
+                            <input className='bg-white dark:bg-gray-700 block text-lg dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="password" name="confirm_password" id="confirm_password" placeholder="••••••••••••" required/>
                         </div>
 
                         <p className="text-lg dark:text-gray-300 text-center">
