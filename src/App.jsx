@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Sidebar from './components/Sidebar';
-import SignedIn from './components/SignedIn';
+import Home from './components/Home';
 import Profile from './components/Profile';
 import ProfileEdit from './components/ProfileEdit';
 import SearchPage from './components/SearchPage';
@@ -51,7 +51,7 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <SignedIn/> }/>
+              <Route path='/' element={ <Home/> }/>
               <Route path='/username' element={ <Profile/> }/>
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>

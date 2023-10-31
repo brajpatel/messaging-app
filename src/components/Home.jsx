@@ -1,4 +1,4 @@
-function SignedIn() {
+function Home() {
     return (
         <div className='hidden lg:block lg:h-full w-auto overflow-x-hidden overflow-y-auto p-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-50'>
             <p className="text-xl font-bold">Something interactive, a randome quote generator - fill up this space</p>
@@ -9,4 +9,4 @@ function SignedIn() {
     )
 }
 
-export default SignedIn;
+export default Home;
