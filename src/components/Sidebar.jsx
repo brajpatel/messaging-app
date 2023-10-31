@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LuBird } from 'react-icons/lu';
 import Dropdown from "./Dropdown";
+import AddedFriend from "./AddedFriend";
 
 function Sidebar({ theme, handleTheme }) {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -42,13 +43,7 @@ function Sidebar({ theme, handleTheme }) {
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
                             return (
-                                <li key={index} className="w-full sm:w-auto lg:w-full rounded flex gap-6 px-4 py-3 md:py-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-400 transition-all cursor-pointer">
-                                    <div className={`relative h-14 w-14 md:h-[3.75rem] md:w-[3.75rem] lg:h-16 lg:w-16 bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden`} style={{backgroundImage: `url(${friend.profile_picture})`}}></div>
-                                    <div className="overflow-hidden">
-                                        <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>
-                                        <p className="opacity-80 overflow-hidden whitespace-nowrap text-ellipsis">{friend.status_message}</p>
-                                    </div>
-                                </li>
+                                <AddedFriend key={index} friend={friend}/>
                             )
                         })}
                     </ul>
