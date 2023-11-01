@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
-function NotFound() {
+function PageNotFound() {
     return (
         <div className='h-screen lg:h-full w-full lg:w-auto absolute top-0 left-0 lg:relative lg:p-3 flex flex-col items-center bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
             <div className='w-full lg:flex lg:flex-col lg:items-center lg:px-2 lg:py-4'>
@@ -17,8 +17,8 @@ function NotFound() {
             </div>
 
             <div className='flex flex-col items-center gap-2 mt-6 md:mt-8 lg:mt-0 px-2'>
-                <p className='w-4/5 text-gray-900 dark:text-gray-100 text-xl lg:text-xl text-center font-bold'>Uh oh... it doesn't look like we could find the page you're looking for.</p>
-                <p className='w-4/5 text-gray-900 dark:text-gray-100 text-xl lg:text-xl mb-10 text-center font-bold'>The page may not exist or you may have tried searching for the wrong url.</p>
+                <p className='text-gray-900 dark:text-gray-100 text-xl lg:text-xl text-center font-bold'>Uh oh... it doesn't look like we could find the page you're looking for.</p>
+                <p className='text-gray-900 dark:text-gray-100 text-xl lg:text-xl mb-10 text-center font-bold'>The page may not exist or you may have tried searching for the wrong url.</p>
 
                 <div className='w-52 md:w-64 xl:w-72'>
                     <svg
@@ -40,4 +40,4 @@ function NotFound() {
     )
 }
 
-export default NotFound;
+export default PageNotFound;

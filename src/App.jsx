@@ -8,7 +8,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import ProfileEdit from './components/ProfileEdit';
 import SearchPage from './components/SearchPage';
-import NotFound from './components/NotFound';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -57,7 +57,7 @@ function App() {
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
               <Route path='/chat/:chatId' element={ <div>Chat page</div> }/>
-              <Route path='*' element={ <NotFound/> }/>
+              <Route path='*' element={ <PageNotFound/> }/>
             </>
           )}
         </Routes>
