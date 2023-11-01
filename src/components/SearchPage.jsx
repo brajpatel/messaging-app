@@ -54,7 +54,7 @@ function SearchPage() {
 
                     <p className='block lg:hidden text-lg lg:underline'>Search</p>
 
-                    <p className='hidden lg:block lg:text-xl lg:underline'>Search for friends</p>
+                    <p className='hidden lg:block lg:text-xl xl:text-2xl lg:underline'>Search for friends</p>
                 </div>
 
                 <div className='w-[90%] sm:w-3/5 md:w-1/2 xl:w-1/3 mx-auto flex justify-center items-center py-4 lg:p-2'>
