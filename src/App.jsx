@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import ProfileEdit from './components/ProfileEdit';
 import SearchPage from './components/SearchPage';
+import NotFound from './components/NotFound';
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -56,7 +57,7 @@ function App() {
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
               <Route path='/chat/:chatId' element={ <div>Chat page</div> }/>
-              <Route path='*' element={ <div className='h-auto lg:h-full w-auto overflow-hidden bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50'>404 Not Found</div> }/>
+              <Route path='*' element={ <NotFound/> }/>
             </>
           )}
         </Routes>
