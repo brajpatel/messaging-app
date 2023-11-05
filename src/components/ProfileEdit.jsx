@@ -49,8 +49,8 @@ function ProfileEdit() {
                         </div>
 
                         <div>
-                        <label className="text-lg dark:text-gray-100" htmlFor="email">Email</label>
-                            <input className='bg-white dark:bg-gray-800 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' type="email" name="email" id="email"/>
+                            <label className="text-lg dark:text-gray-100" htmlFor="status_message">Status Message</label>
+                            <input className='bg-white dark:bg-gray-800 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' type="text" name="status_message" id="status_message"/>
                         </div>
 
                         <div>
