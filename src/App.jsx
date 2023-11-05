@@ -39,7 +39,7 @@ function App() {
   }
   
   return (
-    <div className={user ? 'h-screen flex flex-col lg:block dark:bg-gray-900 overflow-hidden' : 'h-screen bg-gray-100 dark:bg-gray-900'}>
+    <div className={user ? 'h-screen flex flex-col lg:block dark:bg-gray-900' : 'h-screen bg-gray-100 dark:bg-gray-900'}>
       <BrowserRouter>
         {user && <Sidebar theme={theme} handleTheme={handleTheme}/>}
 

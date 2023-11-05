@@ -19,7 +19,7 @@ function ProfileEdit() {
     }
 
     return (
-        <div className='h-screen lg:h-full w-full lg:w-auto absolute top-0 left-0 lg:relative lg:px-4 lg:py-3 flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
+        <div className='lg:h-full w-full lg:w-auto absolute top-0 left-0 lg:relative lg:px-4 lg:py-3 flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
             <div className="h-[4.4rem] md:h-[4.6rem] lg:h-auto w-full flex justify-between items-center lg:justify-center px-4 lg:py-4 font-bold bg-rose-600 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-800 text-gray-50 lg:text-gray-900 dark:text-gray-50">
                 <Link to="/username" className='block lg:hidden hover:bg-[rgb(255,255,255,0.4)] dark:hover:bg-[rgb(255,255,255,0.2)] p-2 rounded-full'>
                     <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
@@ -28,7 +28,7 @@ function ProfileEdit() {
                 <p className='text-lg lg:text-xl lg:underline'>Edit Profile</p>
             </div>
             
-            <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center gap-4 sm:gap-5 md:gap-12 lg:gap-16 md:flex-row md:justify-center lg:justify-between mx-auto mt-4 md:mt-10 lg:mt-6 px-4 py-8 md:py-10 lg:px-12 xl:px-16 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
+            <div className='w-4/5 lg:w-full 2xl:w-max flex flex-col items-center gap-4 sm:gap-5 md:gap-12 lg:gap-16 md:flex-row md:justify-center lg:justify-between mx-auto mt-4 mb-4 md:mt-10 lg:mt-6 px-4 py-8 md:px-8 md:py-10 xl:px-16 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
                 {profilePicture ? (
                     <div className='flex flex-col items-center gap-4'>
                         <div className='min-h-[40vw] min-w-[40vw] sm:min-h-[30vw] sm:min-w-[30vw] md:min-h-[14rem] md:min-w-[14rem] lg:min-h-[16rem] lg:min-w-[16rem] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-rose-500 dark:border-gray-200 transition-all rounded-full' style={{backgroundImage: `url(${profilePicture})`}}></div>
