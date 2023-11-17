@@ -12,7 +12,7 @@ function Profile() {
                 <p className='text-lg lg:text-xl lg:underline'>Profile</p>
             </div>
             
-            <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center gap-4 sm:gap-5 md:gap-12 lg:gap-16 md:flex-row md:justify-center mx-auto mt-4 md:mt-10 px-4 py-8 md:py-10 lg:px-20 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
+            <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center gap-4 sm:gap-5 md:gap-12 lg:gap-16 md:flex-row md:justify-center mx-auto mt-4 md:mt-8 px-4 py-8 md:py-10 lg:px-20 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
                 <div className='min-h-[40vw] min-w-[40vw] sm:min-h-[30vw] sm:min-w-[30vw] md:min-h-[14rem] md:min-w-[14rem] lg:min-h-[16rem] lg:min-w-[16rem] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-rose-500 dark:border-gray-200 transition-all rounded-full' style={{backgroundImage: 'url(https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg)'}}></div>
 
                 <div className='flex flex-col items-center text-center'>
