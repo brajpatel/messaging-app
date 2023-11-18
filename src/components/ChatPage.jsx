@@ -13,14 +13,14 @@ function ChatPage() {
                 Messages here
             </div>
 
-            <div className='flex justify-center items-center gap-4 px-2 py-2'>
-                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded text-center' placeholder="Type message here"/>
+            <form className='flex justify-center items-center gap-4 px-2 py-2'>
+                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="Type message here"/>
 
-                <button className='h-max flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 text-gray-50 rounded-lg text-lg outline-none'>
-                    Send
+                <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' type='submit'>
+                    <span className='hidden sm:block'>Send</span>
                     <IoSend/>
                 </button>
-            </div>
+            </form>
         </div>
     )
 }
