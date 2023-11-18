@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import ProfileEdit from './components/ProfileEdit';
 import SearchPage from './components/SearchPage';
+import ChatPage from './components/ChatPage';
 import PageNotFound from './components/PageNotFound';
 
 function App() {
@@ -56,7 +57,7 @@ function App() {
               <Route path='/username' element={ <Profile/> }/>
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
-              <Route path='/chat/:chatId' element={ <div>Chat page</div> }/>
+              <Route path='/chat/:chatId' element={ <ChatPage/> }/>
               <Route path='*' element={ <PageNotFound/> }/>
             </>
           )}
