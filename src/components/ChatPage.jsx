@@ -64,7 +64,7 @@ function ChatPage() {
                 <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
             </Link>
 
-            <div className='h-full text-gray-900 dark:text-gray-50 p-5 overflow-y-auto'>
+            <div className='h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
                 {messages.map((message, index) => {
                     return (
                         <Message key={index} message={message.message} dateSent={message.date_sent} user={message.user}/>
@@ -72,7 +72,7 @@ function ChatPage() {
                 })}
             </div>
 
-            <form className='flex justify-center items-center gap-4 px-2 py-2'>
+            <form className='flex justify-center items-center gap-4 px-2 py-3'>
                 <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="Type message here"/>
 
                 <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' type='submit'>
