@@ -8,7 +8,7 @@ function Message({ message, dateSent, user }) {
         let date = str[0].split('-').reverse().join('-');
         let time = str[1].split('.')[0];
 
-        setDateTime(date + ' - ' + time)
+        setDateTime(date + ' - ' + time);
     }, [])
 
     return (
