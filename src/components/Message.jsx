@@ -5,7 +5,7 @@ function Message({ message, dateSent, user }) {
 
     useEffect(() => {
         let str = dateSent.split('T');
-        let date = str[0];
+        let date = str[0].split('-').reverse().join('-');
         let time = str[1].split('.')[0];
 
         setDateTime(date + ' - ' + time)
