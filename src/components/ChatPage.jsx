@@ -2,8 +2,24 @@ import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { IoSend } from "react-icons/io5";
 import Message from './Message';
+import { useState } from 'react';
 
 function ChatPage() {
+    const [messages, setMessages] = useState([
+        {
+            message: 'First message, hello',
+            user: true
+        },
+        {
+            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
+            user: false
+        },
+        {
+            message: 'Okay then',
+            user: true
+        }
+    ])
+
     return (
         <div className='h-screen w-full lg:w-auto absolute top-0 left-0 lg:relative p-2 lg:p-3 flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
             <Link to="/" className='absolute top-4 left-4 lg:hidden bg-rose-600 hover:bg-rose-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white p-2 rounded-full'>
@@ -11,7 +27,11 @@ function ChatPage() {
             </Link>
 
             <div className='h-full text-gray-900 dark:text-gray-50 p-2'>
-                <Message/>
+                {messages.map((message) => {
+                    return (
+                        <Message message={message.message} user={message.user}/>
+                    )
+                })}
             </div>
 
             <form className='flex justify-center items-center gap-4 px-2 py-2'>

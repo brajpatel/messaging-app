@@ -1,7 +1,7 @@
-function Message() {
+function Message({ message, user }) {
     return (
-        <div>
-            message
+        <div className="mb-2">
+            <div className={`${user ? 'bg-rose-500' : 'bg-gray-400'}`}>{message}</div>
         </div>
     )
 }
