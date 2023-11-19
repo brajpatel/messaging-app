@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { IoSend } from "react-icons/io5";
+import Message from './Message';
 
 function ChatPage() {
     return (
@@ -10,7 +11,7 @@ function ChatPage() {
             </Link>
 
             <div className='h-full text-gray-900 dark:text-gray-50 p-2'>
-                Messages here
+                <Message/>
             </div>
 
             <form className='flex justify-center items-center gap-4 px-2 py-2'>
