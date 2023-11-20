@@ -78,10 +78,6 @@ function ChatPage() {
         scrollToLastMessage();
     }, [messages])
 
-    // =======================================================
-    // DISPLAY THE LOADER WHILE THE MESSAGES ARE BEING FETCHED
-    // =======================================================
-
     return (
         <div className='h-screen w-full lg:w-auto absolute top-0 left-0 lg:relative flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
             <Link to="/" className='absolute top-4 left-4 lg:hidden bg-rose-600 hover:bg-rose-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white p-2 rounded-full z-30'>
