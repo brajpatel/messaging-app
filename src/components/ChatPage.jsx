@@ -60,10 +60,23 @@ const sampleMessages = [
 
 function ChatPage() {
     const messagesEnd = useRef(null);
-    const [messages, setMessages] = useState(null)
+    const [messages, setMessages] = useState(null);
+    const [message, setMessage] = useState('');
 
-    const addMessage = () => {
-        setMessages((prev) => [...prev, { message: 'bruh ana cuh', date_sent: new Date().toISOString(), user: true }]);
+    const handleMessage = (e) => {
+        setMessage(e.target.value);
+    }
+
+    const sendMessage = (e) => {
+        e.preventDefault();
+
+        if(message.trim() === '') {
+            setMessage('');
+            return;
+        };
+
+        setMessages((prev) => [...prev, { message: message, date_sent: new Date().toISOString(), user: true }]);
+        setMessage('');
     }
 
     const scrollToLastMessage = () => {
@@ -71,7 +84,9 @@ function ChatPage() {
     }
 
     useEffect(() => {
-
+        setTimeout(() => {
+            setMessages(sampleMessages);
+        }, 3000);
     }, [])
 
     useEffect(() => {
@@ -87,7 +102,6 @@ function ChatPage() {
             <div className='relative h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
                 {messages ? (
                     <>
-                        <button onClick={addMessage}>Add message</button>
                         {messages.map((message, index) => {
                             return (
                                 <Message key={index} message={message.message} dateSent={message.date_sent} user={message.user}/>
@@ -102,9 +116,9 @@ function ChatPage() {
             </div>
 
             <form className='flex justify-center items-center gap-4 px-2 py-3'>
-                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="Type message here"/>
+                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="Type message here" value={message} onInput={handleMessage}/>
 
-                <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' type='submit'>
+                <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' onClick={sendMessage} type='submit'>
                     <span className='hidden sm:block'>Send</span>
                     <IoSend/>
                 </button>

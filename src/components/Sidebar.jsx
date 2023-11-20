@@ -43,7 +43,9 @@ function Sidebar({ theme, handleTheme }) {
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
                             return (
-                                <AddedFriend key={index} friend={friend}/>
+                                <Link key={index} to={`/chat/${index}`}>
+                                    <AddedFriend friend={friend}/>
+                                </Link>
                             )
                         })}
                     </ul>
