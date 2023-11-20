@@ -1,68 +1,87 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { IoSend } from "react-icons/io5";
+import {  IoSend } from "react-icons/io5";
 import Message from './Message';
 
+const sampleMessages = [
+    {
+        message: 'First message, hello',
+        date_sent: new Date().toISOString(),
+        user: true
+    },
+    {
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
+        date_sent: new Date().toISOString(),
+        user: false
+    },
+    {
+        message: 'Okay then',
+        date_sent: new Date().toISOString(),
+        user: true
+    },
+    {
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
+        date_sent: new Date().toISOString(),
+        user: true
+    },
+    {
+        message: 'Lorem ipsum dolor sit amet consectetur repellendus. Quod, corrupti veritatis?',
+        date_sent: new Date().toISOString(),
+        user: false
+    },
+    {
+        message: 'First message, hello',
+        date_sent: new Date().toISOString(),
+        user: true
+    },
+    {
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
+        date_sent: new Date().toISOString(),
+        user: false
+    },
+    {
+        message: 'Okay then',
+        date_sent: new Date().toISOString(),
+        user: true
+    },
+    {
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
+        date_sent: new Date().toISOString(),
+        user: true
+    },
+    {
+        message: 'Lorem ipsum dolor sit amet consectetur repellendus. Quod, corrupti veritatis?',
+        date_sent: new Date().toISOString(),
+        user: false
+    },
+]
+
 function ChatPage() {
-    const [messages, setMessages] = useState([
-        {
-            message: 'First message, hello',
-            date_sent: new Date().toISOString(),
-            user: true
-        },
-        {
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-            date_sent: new Date().toISOString(),
-            user: false
-        },
-        {
-            message: 'Okay then',
-            date_sent: new Date().toISOString(),
-            user: true
-        },
-        {
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-            date_sent: new Date().toISOString(),
-            user: true
-        },
-        {
-            message: 'Lorem ipsum dolor sit amet consectetur repellendus. Quod, corrupti veritatis?',
-            date_sent: new Date().toISOString(),
-            user: false
-        },
-        {
-            message: 'First message, hello',
-            date_sent: new Date().toISOString(),
-            user: true
-        },
-        {
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-            date_sent: new Date().toISOString(),
-            user: false
-        },
-        {
-            message: 'Okay then',
-            date_sent: new Date().toISOString(),
-            user: true
-        },
-        {
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-            date_sent: new Date().toISOString(),
-            user: true
-        },
-        {
-            message: 'Lorem ipsum dolor sit amet consectetur repellendus. Quod, corrupti veritatis?',
-            date_sent: new Date().toISOString(),
-            user: false
-        },
-    ])
+    const messagesEnd = useRef(null);
+    const [messages, setMessages] = useState(null)
+
+    const addMessage = () => {
+        setMessages((prev) => [...prev, { message: 'bruh ana cuh', date_sent: new Date().toISOString(), user: true }]);
+    }
+
+    const scrollToLastMessage = () => {
+        messagesEnd?.current?.scrollIntoView({ behavior: "smooth" });
+    }
 
     useEffect(() => {
-        messagesEnd.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+            setMessages(sampleMessages);
+        }, 3000);
     }, [])
 
-    const messagesEnd = useRef(null);
+    useEffect(() => {
+        scrollToLastMessage();
+    }, [messages])
+
+    // =======================================================
+    // DISPLAY THE LOADER WHILE THE MESSAGES ARE BEING FETCHED
+    // =======================================================
 
     return (
         <div className='h-screen w-full lg:w-auto absolute top-0 left-0 lg:relative flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
@@ -71,11 +90,19 @@ function ChatPage() {
             </Link>
 
             <div className='h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
-                {messages.map((message, index) => {
-                    return (
-                        <Message key={index} message={message.message} dateSent={message.date_sent} user={message.user}/>
-                    )
-                })}
+                {messages ? (
+                    <>
+                        <button onClick={addMessage}>Add message</button>
+                        {messages.map((message, index) => {
+                            return (
+                                <Message key={index} message={message.message} dateSent={message.date_sent} user={message.user}/>
+                            )
+                        })}
+                    </>
+                ) : (
+                    <div>loader</div>
+                )}
+                
                 <div className='float-left clear-both' ref={messagesEnd}></div>
             </div>
 
