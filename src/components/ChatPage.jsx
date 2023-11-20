@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import {  IoSend } from "react-icons/io5";
 import Message from './Message';
+import Loader from './Loader';
 
 const sampleMessages = [
     {
@@ -70,9 +71,7 @@ function ChatPage() {
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            setMessages(sampleMessages);
-        }, 3000);
+
     }, [])
 
     useEffect(() => {
@@ -85,11 +84,11 @@ function ChatPage() {
 
     return (
         <div className='h-screen w-full lg:w-auto absolute top-0 left-0 lg:relative flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
-            <Link to="/" className='absolute top-4 left-4 lg:hidden bg-rose-600 hover:bg-rose-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white p-2 rounded-full'>
+            <Link to="/" className='absolute top-4 left-4 lg:hidden bg-rose-600 hover:bg-rose-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white p-2 rounded-full z-30'>
                 <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
             </Link>
 
-            <div className='h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
+            <div className='relative h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
                 {messages ? (
                     <>
                         <button onClick={addMessage}>Add message</button>
@@ -100,7 +99,7 @@ function ChatPage() {
                         })}
                     </>
                 ) : (
-                    <div>loader</div>
+                    <Loader/>
                 )}
                 
                 <div className='float-left clear-both' ref={messagesEnd}></div>
