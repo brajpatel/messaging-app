@@ -4,7 +4,7 @@ import { BsHouseDoor } from 'react-icons/bs';
 function Dropdown({ showDropdown, handleDropdown, theme, handleTheme }) {
     return (
         <div className={showDropdown ?
-            'transition-all w-full absolute top-full right-0 flex flex-col pt-px bg-white dark:bg-gray-900 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-gray-800 text-lg shadow-[0_8px_10px_rgba(0,0,0,0.5)] overflow-hidden z-10'
+            'transition-all w-full absolute top-full right-0 flex flex-col bg-white dark:bg-gray-900 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-gray-900 text-lg shadow-[0_8px_10px_rgba(0,0,0,0.5)] overflow-hidden z-10'
             :
             'transition-all w-full absolute top-full right-full flex flex-col pt-px bg-white dark:bg-gray-900 border-x-0 border-y border-rose-600 dark:border-x-0 dark:border-y dark:border-gray-800 text-lg shadow-md overflow-hidden z-10'}
         >
