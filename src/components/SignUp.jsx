@@ -7,7 +7,6 @@ function SignUp() {
                 <div className="hidden md:flex flex-col items-center md:w-2/5">
                     <a href="https://github.com/brajpatel" target="_blank" className="flex items-center text-2xl font-bold dark:text-gray-50">
                         <img className="w-32 h-32" src="/logo.png" alt="logo"/>
-                        Macaw
                     </a>
                 
                     <div className="flex flex-col gap-5">
@@ -31,7 +30,7 @@ function SignUp() {
                             <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
                             <div className="flex flex-col">
                                 <p className="font-bold text-lg lg:text-xl dark:text-gray-200">A third exciting feature</p>
-                                <p className="lg:text-lg dark:text-gray-300">Description for this feature to make you go woooh</p>
+                                <p className="lg:text-lg dark:text-gray-300">Description for this feature to make you go woooooh</p>
                             </div>
                         </div>
                     </div>
