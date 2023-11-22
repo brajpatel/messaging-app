@@ -3,20 +3,13 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 function PageNotFound() {
     return (
-        <div className='h-screen lg:h-full w-full lg:w-auto absolute top-0 left-0 lg:relative lg:p-3 flex flex-col items-center bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
-            <div className='w-full lg:flex lg:flex-col lg:items-center lg:px-2 lg:py-4'>
-                <div className="h-[4.4rem] md:h-[4.6rem] lg:h-auto w-full lg:w-auto font-bold bg-rose-600 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 text-gray-50 lg:text-gray-900 dark:text-gray-50 flex justify-between items-center px-4 lg:p-0">
-                    <Link to="/" className='block lg:hidden hover:bg-[rgb(255,255,255,0.4)] dark:hover:bg-[rgb(255,255,255,0.2)] p-2 rounded-full'>
-                        <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
-                    </Link>
+        <div className='h-screen lg:h-full w-full lg:w-auto absolute top-0 left-0 lg:relative lg:py-6 flex flex-col items-center bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
+            <Link to="/" className='absolute top-4 left-4 lg:hidden bg-rose-600 hover:bg-rose-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white p-2 rounded-full z-30'>
+                <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
+            </Link>
 
-                    <p className='block lg:hidden text-lg'>Page Not Found!</p>
-
-                    <p className='hidden lg:block lg:text-xl xl:text-2xl lg:underline'>Page Not Found!</p>
-                </div>
-            </div>
-
-            <div className='flex flex-col items-center gap-2 mt-6 md:mt-8 lg:mt-0 px-2'>
+            <div className='flex flex-col items-center gap-2 mt-8 px-6'>
+                <p className='text-gray-900 dark:text-gray-100 text-xl lg:text-xl text-center font-bold underline'>Page Not Found</p>
                 <p className='text-gray-900 dark:text-gray-100 text-xl lg:text-xl text-center font-bold'>Uh oh... it doesn't look like we could find the page you're looking for.</p>
                 <p className='text-gray-900 dark:text-gray-100 text-xl lg:text-xl mb-10 text-center font-bold'>The page may not exist or you may have tried searching for the wrong url.</p>
 
