@@ -1,15 +1,19 @@
 import { useEffect } from "react";
-import MouseTrail from "./MouseTrail";
 
 function Home() {
+
+    const continueMouseTrail = () => {
+        
+    }
+
     useEffect(() => {
         const container = document.getElementById('container');
         const mouseTrail = document.querySelector('.mouse-trail');
 
         container.addEventListener('mousemove', (e) => {
-            mouseTrail.style.transform = `translateY(${e.offsetY}px)`;   
-            mouseTrail.style.transform += `translateX(${e.offsetX}px)`;   
-        })
+            mouseTrail.style.transform = `translateY(${e.offsetY - 10}px)`;
+            mouseTrail.style.transform += `translateX(${e.offsetX - 10}px)`;
+        }, false)
 
     }, [])
     
@@ -20,7 +24,7 @@ function Home() {
             <p>A quote just for you:</p>
             <p>That which is dreamed cannot be grasped. But work toward it day to day and you will find it in your hands.</p>
 
-            <MouseTrail/>
+            <div className="mouse-trail h-[20px] w-[20px] absolute top-0 left-0 bg-black rounded-full transition"></div>
         </div>
     )
 }
