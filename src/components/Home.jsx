@@ -4,11 +4,11 @@ import MouseTrail from "./MouseTrail";
 function Home() {
     useEffect(() => {
         const container = document.getElementById('container');
-        const mouseTrail = document.getElementById('mouse-trail');
+        const mouseTrail = document.querySelector('.mouse-trail');
 
         container.addEventListener('mousemove', (e) => {
             mouseTrail.style.transform = `translateY(${e.offsetY}px)`;   
-            mouseTrail.style.transform += `translateX(${e.offsetX }px)`;   
+            mouseTrail.style.transform += `translateX(${e.offsetX}px)`;   
         })
 
     }, [])
