@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {  IoSend } from "react-icons/io5";
 
 function Feed() {
