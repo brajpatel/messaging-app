@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import RedirectToFeed from './components/RedirectToFeed';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Sidebar from './components/Sidebar';
@@ -47,13 +48,15 @@ function App() {
         <Routes>
           {!user ? (
             <>
+              <Route path='/' element={ <Navigate to='/login' /> }/>
               <Route path='/login' element={ <Login handleTheme={handleTheme}/> }/>
               <Route path='/sign-up' element={ <SignUp handleTheme={handleTheme}/> }/>
               <Route path='*' element={<Navigate to="/login"/>}/>
             </>
           ) : (
             <>
-              <Route path='/' element={ <Feed/> }/>
+              <Route path='/' element={ <Navigate to='/feed' /> }/>
+              <Route path='/feed' element={ <Feed/> }/>
               <Route path='/username' element={ <Profile/> }/>
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
