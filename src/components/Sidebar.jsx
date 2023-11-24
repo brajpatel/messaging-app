@@ -40,7 +40,7 @@ function Sidebar({ theme, handleTheme }) {
 
             <div className="h-4/5 dark:text-gray-50">
                 {friends.length ? (
-                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:auto-rows-max lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
+                    <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
                             return (
                                 <Link key={index} to={`/chat/${index}`}>

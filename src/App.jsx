@@ -54,8 +54,7 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <Navigate to='/feed' /> }/>
-              <Route path='/feed' element={ <Feed/> }/>
+              <Route path='/' element={ <Feed/> }/>
               <Route path='/username' element={ <Profile/> }/>
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>

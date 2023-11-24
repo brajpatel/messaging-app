@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BsHouseDoor } from 'react-icons/bs';
+import { BsCollection } from "react-icons/bs";
 
 function Dropdown({ showDropdown, handleDropdown, theme, handleTheme }) {
     return (
@@ -10,7 +10,7 @@ function Dropdown({ showDropdown, handleDropdown, theme, handleTheme }) {
         >
             <Link to="/" className="hidden lg:block h-full w-full py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-gray-50 cursor-pointer transition-colors" onClick={handleDropdown}>
                 Posts
-                <BsHouseDoor className="inline-block ml-2"/>
+                <BsCollection className="inline-block ml-2"/>
             </Link>
 
             <hr className="border-1 border-rose-600 dark:border-gray-900"/>
