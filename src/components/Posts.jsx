@@ -44,6 +44,9 @@ function Posts() {
             setPostMessage('');
             return;
         }
+
+        setExamplePosts((prev) => [...prev, { username: 'Sip', message: postMessage, profile_picture: 'https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg'}]);
+        setPostMessage('');
     }
 
     return (
@@ -57,7 +60,7 @@ function Posts() {
                 </button>
             </form>
 
-            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:mx-auto xl:gap-x-6 xl:gap-y-4 mt-4">
+            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:gap-x-6 xl:gap-y-4 mx-auto mt-4">
                 {examplePosts.map((post, index) => {
                     return (
                         <Post key={index} post={post}/>
