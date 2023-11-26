@@ -104,7 +104,7 @@ function ChatPage() {
                     <>
                         {messages.map((message, index) => {
                             return (
-                                <Message key={index} message={message.message} dateSent={message.date_sent} user={message.user}/>
+                                <Message key={index} message={message}/>
                             )
                         })}
                     </>
