@@ -5,7 +5,7 @@ function Post({ post }) {
 
                 <div className="w-full flex flex-col justify-center py-2">
                     <p className="lg:px-5 xl:px-3">{post.message}</p>
-                    <p className="text-gray-600 dark:text-gray-300 text-right italic pr-8">- {post.username}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-right pr-8 font-bold italic">- {post.username}</p>
                 </div>
         </li>
     )

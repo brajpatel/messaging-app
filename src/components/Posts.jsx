@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  IoSend } from "react-icons/io5";
+import { IoSend } from "react-icons/io5";
 import Post from "./Post";
 
 function Posts() {
@@ -13,21 +13,25 @@ function Posts() {
         },
         {
             username: 'Jhin',
+            message: 'All the world.. on one arrow.',
             message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
             profile_picture: 'https://i.pinimg.com/1200x/9d/00/4c/9d004c40630c28c54e1bc37d10b35657.jpg',
         },
         {
             username: 'Nasus',
+            message: 'All the world.. on one arrow.',
             message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
             profile_picture: 'https://i.pinimg.com/564x/0e/d8/54/0ed8549cbf8d409bc3b90731085f865d.jpg',
         },
         {
             username: 'Jinx',
+            message: 'All the world.. on one arrow.',
             message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
             profile_picture: 'https://wallpapers-clan.com/wp-content/uploads/2023/07/league-of-legends-jinx-pfp-01.jpg',
         },
         {
             username: 'Irelia',
+            message: 'All the world.. on one arrow.',
             message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
             profile_picture: 'https://i.pinimg.com/564x/fd/56/3b/fd563b26fb28a70d2b262a39af322655.jpg',
         }
