@@ -4,6 +4,7 @@ import Post from "./Post";
 
 function Posts() {
     const [postMessage, setPostMessage] = useState('');
+    const [posts, setPosts] = useState(null);
     const [examplePosts, setExamplePosts] = useState([
         {
             username: 'Ashe',
@@ -47,16 +48,16 @@ function Posts() {
 
     return (
         <div id="container" className='relative hidden lg:block lg:h-full p-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 overflow-hidden'>
-            <form className="flex justify-center items-center gap-4 py-3">
+            <form className="flex justify-center items-center gap-3 py-3">
                 <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="What's on your mind today..." value={postMessage} onInput={handlePostMessage}/>
 
                 <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' onClick={createPost} type='submit'>
-                    <span className='hidden sm:block'>Post</span>
+                    Post
                     <IoSend/>
                 </button>
             </form>
 
-            <ul className="flex flex-col gap-3">
+            <ul className="lg:w-full lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:mx-auto xl:gap-x-6 xl:gap-y-4 mt-4">
                 {examplePosts.map((post, index) => {
                     return (
                         <Post key={index} post={post}/>
