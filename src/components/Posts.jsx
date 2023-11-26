@@ -8,7 +8,7 @@ function Posts() {
     const [examplePosts, setExamplePosts] = useState([
         {
             username: 'Ashe',
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
+            message: 'All the world.. on one arrow.',
             profile_picture: 'https://64.media.tumblr.com/91b159df9a8c606c4fd5a74427d2aa9c/b9116db0ab4711c9-77/s500x750/01bd6c7a8791be7f6f6e4b7afee2424cf671bd53.png',
         },
         {
@@ -60,7 +60,7 @@ function Posts() {
                 </button>
             </form>
 
-            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:gap-x-6 xl:gap-y-4 mx-auto mt-4">
+            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:gap-x-6 xl:gap-y-6 mx-auto mt-4">
                 {examplePosts.map((post, index) => {
                     return (
                         <Post key={index} post={post}/>
