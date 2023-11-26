@@ -2,7 +2,7 @@ import { useState } from "react";
 import {  IoSend } from "react-icons/io5";
 import Post from "./Post";
 
-function Feed() {
+function Posts() {
     const [postMessage, setPostMessage] = useState('');
     const [examplePosts, setExamplePosts] = useState([
         {
@@ -67,4 +67,4 @@ function Feed() {
     )
 }
 
-export default Feed;
+export default Posts;

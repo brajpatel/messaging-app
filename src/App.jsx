@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Sidebar from './components/Sidebar';
-import Feed from './components/Feed';
+import Posts from './components/Posts';
 import Profile from './components/Profile';
 import ProfileEdit from './components/ProfileEdit';
 import SearchPage from './components/SearchPage';
@@ -54,7 +54,7 @@ function App() {
             </>
           ) : (
             <>
-              <Route path='/' element={ <Feed/> }/>
+              <Route path='/' element={ <Posts/> }/>
               <Route path='/username' element={ <Profile/> }/>
               <Route path='/username/edit' element={ <ProfileEdit/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
