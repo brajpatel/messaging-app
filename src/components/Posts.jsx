@@ -57,7 +57,7 @@ function Posts() {
                 </button>
             </form>
 
-            <ul className="lg:w-full lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:mx-auto xl:gap-x-6 xl:gap-y-4 mt-4">
+            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 xl:w-[95%] xl:grid xl:grid-cols-2 xl:justify-items-center xl:mx-auto xl:gap-x-6 xl:gap-y-4 mt-4">
                 {examplePosts.map((post, index) => {
                     return (
                         <Post key={index} post={post}/>
