@@ -60,8 +60,9 @@ const sampleMessages = [
 
 function ChatPage() {
     const messagesEnd = useRef(null);
-    const [messages, setMessages] = useState(null);
+    const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
+    const [showLoader, setShowLoader] = useState(false);
 
     const handleMessage = (e) => {
         setMessage(e.target.value);
@@ -84,8 +85,11 @@ function ChatPage() {
     }
 
     useEffect(() => {
+        setShowLoader(true);
+
         setTimeout(() => {
             setMessages(sampleMessages);
+            setShowLoader(false);
         }, 3000);
     }, [])
 
@@ -100,7 +104,7 @@ function ChatPage() {
             </Link>
 
             <div className='relative h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
-                {messages ? (
+                {!!messages.length && (
                     <>
                         {messages.map((message, index) => {
                             return (
@@ -108,9 +112,9 @@ function ChatPage() {
                             )
                         })}
                     </>
-                ) : (
-                    <Loader/>
                 )}
+
+                {showLoader && <Loader/>}
                 
                 <div className='float-left clear-both' ref={messagesEnd}></div>
             </div>

@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoSend } from "react-icons/io5";
 import { PiPushPin } from "react-icons/pi";
 import Post from "./Post";
 import Loader from './Loader';
-import { useEffect } from "react";
 
 function Posts() {
     const [postMessage, setPostMessage] = useState('');
     const [posts, setPosts] = useState([]);
-    const [showLoader, setShowLoader] = useState(true);
+    const [showLoader, setShowLoader] = useState(false);
 
     const handlePostMessage = (e) => {
         setPostMessage(e.target.value);
@@ -27,6 +26,8 @@ function Posts() {
     }
 
     useEffect(() => {
+        setShowLoader(true);
+
         setTimeout(() => {
             setShowLoader(false);
         }, 3000);
