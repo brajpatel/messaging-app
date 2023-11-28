@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoSend } from "react-icons/io5";
+import { PiPushPin } from "react-icons/pi";
 import Post from "./Post";
 
 function Posts() {
@@ -14,7 +15,7 @@ function Posts() {
         },
         {
             username: 'Jhin',
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
+            message: 'In carnage I bloom, like a flower in the dawn.',
             date_created: new Date().toISOString(),
             profile_picture: 'https://i.pinimg.com/1200x/9d/00/4c/9d004c40630c28c54e1bc37d10b35657.jpg',
         },
@@ -65,7 +66,18 @@ function Posts() {
                 </button>
             </form>
 
-            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 2xl:w-[95%] 2xl:grid 2xl:grid-cols-2 2xl:justify-items-center 2xl:gap-x-6 2xl:gap-y-6 mx-auto mt-4">
+            <div className="relative min-h-[8rem] max-h-max lg:w-[95%] xl:w-[85%] mx-auto mt-1 mb-4 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
+                <PiPushPin className="absolute top-3 right-3 text-xl"/>
+
+                <div className={`relative lg:min-w-[25%] xl:min-w-[20%] bg-cover bg-center overflow-hidden`} style={{backgroundImage: `url('https://pbs.twimg.com/media/DkvFqyqXgAAFY5z.jpg')`}}></div>
+
+                <div className="w-full flex flex-col justify-center gap-2 py-2 2xl:py-3">
+                    <p className="2xl:text-[1.05rem] lg:px-5 xl:px-8">Welcome to my Messaging App!</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-right pr-8 font-bold italic"><span className="ml-2">-</span>Sip</p>
+                </div>
+            </div>
+
+            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 2xl:w-[95%] 2xl:grid 2xl:grid-cols-2 2xl:justify-items-center 2xl:gap-x-6 2xl:gap-y-6 mx-auto">
                 {examplePosts.map((post, index) => {
                     return (
                         <Post key={index} post={post}/>
