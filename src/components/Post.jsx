@@ -11,7 +11,7 @@ function Post({ post }) {
     }, [])
 
     return (
-        <li className="min-h-[6rem] h-full w-full rounded flex bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
+        <li className="min-h-[8rem] h-full w-full rounded flex bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
             <div className={`relative lg:min-w-[25%] xl:min-w-[20%] bg-cover bg-center overflow-hidden`} style={{backgroundImage: `url(${post.profile_picture})`}}></div>
 
             <div className="w-full flex flex-col justify-center gap-2 py-2 2xl:py-3">

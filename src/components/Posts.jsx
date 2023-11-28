@@ -56,7 +56,7 @@ function Posts() {
     }
 
     return (
-        <div id="container" className='relative hidden lg:block lg:h-full p-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 overflow-x-hidden overflow-y-auto'>
+        <div id="container" className='relative hidden lg:block lg:h-full lg:px-2 xl:px4 pt-2 pb-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 overflow-x-hidden overflow-y-auto'>
             <form className="flex justify-center items-center gap-3 py-3">
                 <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="What's on your mind today..." maxLength="120" value={postMessage} onInput={handlePostMessage} required={true}/>
 
@@ -66,7 +66,7 @@ function Posts() {
                 </button>
             </form>
 
-            <div className="relative min-h-[8rem] max-h-max lg:w-[95%] xl:w-[75%] mx-auto mt-1 mb-4 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
+            <div className="relative min-h-[8rem] max-h-max lg:w-[95%] xl:w-[75%] mx-auto mt-1 mb-5 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
                 <PiPushPin className="absolute top-3 right-3 text-xl"/>
 
                 <div className={`relative lg:min-w-[25%] xl:min-w-[20%] bg-cover bg-center overflow-hidden`} style={{backgroundImage: `url('https://pbs.twimg.com/media/DkvFqyqXgAAFY5z.jpg')`}}></div>
