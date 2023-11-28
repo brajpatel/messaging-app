@@ -21,19 +21,19 @@ function Posts() {
         },
         {
             username: 'Nasus',
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
+            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, jdiass as lroem and the brah ',
             date_created: new Date().toISOString(),
             profile_picture: 'https://i.pinimg.com/564x/0e/d8/54/0ed8549cbf8d409bc3b90731085f865d.jpg',
         },
         {
             username: 'Jinx',
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
+            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, jdiass as lroem and the brah ',
             date_created: new Date().toISOString(),
             profile_picture: 'https://wallpapers-clan.com/wp-content/uploads/2023/07/league-of-legends-jinx-pfp-01.jpg',
         },
         {
             username: 'Irelia',
-            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, vel earum cumque id! Alias est maxime inventore ad.',
+            message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem voluptas, jdiass as lroem and the brah ',
             date_created: new Date().toISOString(),
             profile_picture: 'https://i.pinimg.com/564x/fd/56/3b/fd563b26fb28a70d2b262a39af322655.jpg',
         }
@@ -58,7 +58,7 @@ function Posts() {
     return (
         <div id="container" className='relative hidden lg:block lg:h-full p-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 overflow-x-hidden overflow-y-auto'>
             <form className="flex justify-center items-center gap-3 py-3">
-                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="What's on your mind today..." value={postMessage} onInput={handlePostMessage}/>
+                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="What's on your mind today..." maxLength="120" value={postMessage} onInput={handlePostMessage} required={true}/>
 
                 <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' onClick={createPost} type='submit'>
                     Post
@@ -66,14 +66,16 @@ function Posts() {
                 </button>
             </form>
 
-            <div className="relative min-h-[8rem] max-h-max lg:w-[95%] xl:w-[85%] mx-auto mt-1 mb-4 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
+            <div className="relative min-h-[8rem] max-h-max lg:w-[95%] xl:w-[75%] mx-auto mt-1 mb-4 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
                 <PiPushPin className="absolute top-3 right-3 text-xl"/>
 
                 <div className={`relative lg:min-w-[25%] xl:min-w-[20%] bg-cover bg-center overflow-hidden`} style={{backgroundImage: `url('https://pbs.twimg.com/media/DkvFqyqXgAAFY5z.jpg')`}}></div>
 
                 <div className="w-full flex flex-col justify-center gap-2 py-2 2xl:py-3">
-                    <p className="2xl:text-[1.05rem] lg:px-5 xl:px-8">Welcome to my Messaging App!</p>
-                    <p className="text-gray-600 dark:text-gray-300 text-right pr-8 font-bold italic"><span className="ml-2">-</span>Sip</p>
+                    <p className="2xl:text-[1.05rem] pl-4 pr-10">
+                        Welcome to my Messaging App! If you're reading this then it means you've taken the time to create an account and I really appreciate that. I hope you have a smooth experience navigating around and making use of the app's features, and once again, thank you.
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-300 text-right pr-8 font-bold italic"><span className="mr-2">-</span>Sip, from TOP</p>
                 </div>
             </div>
 
