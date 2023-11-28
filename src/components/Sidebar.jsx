@@ -1,32 +1,45 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LuBird } from 'react-icons/lu';
 import Dropdown from "./Dropdown";
 import AddedFriend from "./AddedFriend";
+import Loader from "./Loader";
+
+const exampleFriends = [
+    {
+        username: 'Neeko',
+        status_message: 'Neeko is best decision!',
+        profile_picture: 'https://static.zerochan.net/Neeko.%28League.of.Legends%29.full.3688255.jpg'
+    },
+    {
+        username: 'Morgana',
+        status_message: 'Support Slay',
+        profile_picture: 'https://static.zerochan.net/Morgana.%28League.of.Legends%29.full.3708469.jpg'
+    },
+    {
+        username: 'Kayle',
+        status_message: 'I am the Light!',
+        profile_picture: "https://i.pinimg.com/474x/c6/34/47/c63447bd8b594a51593e06d763084d37.jpg"
+    }
+]
 
 function Sidebar({ theme, handleTheme }) {
     const [showDropdown, setShowDropdown] = useState(false);
-    const [friends, setFriends] = useState([
-        {
-            username: 'Neeko',
-            status_message: 'Neeko is best decision!',
-            profile_picture: 'https://static.zerochan.net/Neeko.%28League.of.Legends%29.full.3688255.jpg'
-        },
-        {
-            username: 'Morgana',
-            status_message: 'Support Slay',
-            profile_picture: 'https://static.zerochan.net/Morgana.%28League.of.Legends%29.full.3708469.jpg'
-        },
-        {
-            username: 'Kayle',
-            status_message: 'I am the Light!',
-            profile_picture: "https://i.pinimg.com/474x/c6/34/47/c63447bd8b594a51593e06d763084d37.jpg"
-        }
-    ]);
+    const [friends, setFriends] = useState([]);
+    const [showLoader, setShowLoader] = useState(false);
 
     const handleDropdown = () => {
         setShowDropdown(!showDropdown);
     }
+
+    useEffect(() => {
+        setShowLoader(true);
+
+        setTimeout(() => {
+            setFriends(exampleFriends);
+            setShowLoader(false);
+        }, 3000);
+    }, [])
 
     return (
         <nav className="h-screen w-full lg:w-[21rem] xl:w-96 float-left flex flex-col bg-white dark:bg-gray-900 lg:border-r-2 border-rose-600 dark:border-gray-800">
@@ -49,6 +62,8 @@ function Sidebar({ theme, handleTheme }) {
                             )
                         })}
                     </ul>
+                ) : showLoader ? (
+                    <Loader/>
                 ) : (
                     <div className="h-full flex flex-col justify-center items-center gap-2 text-center px-4">
                         <LuBird className="fa-solid fa-dove text-[5rem] text-gray-900 dark:text-gray-50"></LuBird>
