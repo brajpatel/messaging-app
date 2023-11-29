@@ -51,7 +51,7 @@ function Sidebar({ theme, handleTheme }) {
                 <Dropdown showDropdown={showDropdown} handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
             </div>
 
-            <div className="h-4/5 dark:text-gray-50">
+            <div className="relative h-4/5 dark:text-gray-50">
                 {friends.length ? (
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
                         {friends.map((friend, index) => {
