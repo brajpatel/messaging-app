@@ -103,7 +103,7 @@ function ChatPage() {
                 <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
             </Link>
 
-            <div className='relative h-full text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
+            <div className='relative h-full flex flex-col text-gray-900 dark:text-gray-50 px-4 lg:px-6 py-4 lg:py-5 overflow-y-auto'>
                 {!!messages.length && (
                     <>
                         {messages.map((message, index) => {
