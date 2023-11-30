@@ -12,12 +12,12 @@ function Message({ message, dateSent, user }) {
     }, [])
 
     return (
-        <div className={`flex ${message.user ? 'flex-row-reverse justify-end self-end' : ''} gap-3 mb-4`}>
+        <div className={`h-auto flex ${message.user ? 'flex-row-reverse justify-end self-end' : ''} gap-3 mb-4`}>
             <div className='h-[2.75rem] min-w-[2.75rem] md:h-[3rem] md:min-w-[3rem] xl:h-[3.75rem] xl:min-w-[3.75rem] self-end bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden' style={{backgroundImage: `url('https://i.pinimg.com/564x/fd/56/3b/fd563b26fb28a70d2b262a39af322655.jpg')`}}></div>
             
-            <div className={`w-[87.5%] md:[70%] ${message.user ? 'flex flex-col items-end border' : ''} break-words`}>
+            <div className={`${message.user ? 'flex flex-col items-end pl-[1.5rem] sm:pl-[3rem] lg:pl-[6rem]' : 'pr-[1.5rem]'}`}>
                 <p className="text-gray-600 dark:text-gray-400 lg:text-lg mb-1">{dateTime}</p>
-                <p className={`w-max lg:text-lg px-3 md:px-4 py-2 ${message.user ? 'bg-rose-600 dark:bg-rose-600 text-gray-50' : 'bg-gray-200 dark:bg-gray-800'} rounded`}>
+                <p className={`max-w-max lg:text-lg px-3 md:px-4 py-2 ${message.user ? 'bg-rose-600 dark:bg-rose-600 text-gray-50' : 'bg-gray-200 dark:bg-gray-800'} rounded`}>
                     {message.message}
                 </p>
             </div>
