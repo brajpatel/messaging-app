@@ -17,7 +17,7 @@ function Message({ message, dateSent, user }) {
             
             <div className={`${message.user ? 'flex flex-col items-end pl-[1.5rem] sm:pl-[5rem] lg:pl-[10rem]' : 'pr-[1.5rem] sm:pr-[5rem] lg:pr-[10rem]'}`}>
                 <p className="text-gray-600 dark:text-gray-400 lg:text-lg mb-1">{dateTime}</p>
-                <p className={`max-w-max lg:text-lg px-3 md:px-4 py-2 ${message.user ? 'bg-rose-600 dark:bg-rose-600 text-gray-50' : 'bg-gray-200 dark:bg-gray-800'} rounded`}>
+                <p className={`max-w-max lg:text-lg px-3 md:px-4 py-2 ${message.user ? 'bg-rose-600 dark:bg-rose-600 text-gray-50' : 'bg-gray-200 dark:bg-gray-800'} rounded break-all`}>
                     {message.message}
                 </p>
             </div>
