@@ -44,7 +44,7 @@ function Posts() {
                 </button>
             </form>
 
-            <div className="relative min-h-[8rem] max-h-max lg:w-[95%] xl:w-[75%] mx-auto mt-1 mb-5 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
+            <div className="relative min-h-[8rem] max-h-max lg:w-[90%] xl:w-[85%] mx-auto mt-1 mb-5 rounded flex bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-800 hover:border-rose-600 dark:hover:border-gray-500 transition-all overflow-hidden select-none">
                 <PiPushPin className="absolute top-3 right-3 text-xl"/>
 
                 <div className={`relative lg:min-w-[25%] xl:min-w-[20%] bg-cover bg-center overflow-hidden`} style={{backgroundImage: `url('https://pbs.twimg.com/media/DkvFqyqXgAAFY5z.jpg')`}}></div>
@@ -57,7 +57,7 @@ function Posts() {
                 </div>
             </div>
 
-            <ul className="lg:w-[95%] lg:flex lg:flex-col lg:items-center lg:gap-3 2xl:w-[95%] 2xl:grid 2xl:grid-cols-2 2xl:justify-items-center 2xl:gap-x-6 2xl:gap-y-6 mx-auto">
+            <ul className="lg:w-[90%] lg:flex lg:flex-col lg:items-center lg:gap-3 2xl:w-[95%] 2xl:grid 2xl:grid-cols-2 2xl:justify-items-center 2xl:gap-x-6 2xl:gap-y-6 mx-auto">
                 {!!posts.length && (
                     <>
                         {posts.map((post, index) => {
