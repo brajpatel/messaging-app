@@ -21,7 +21,7 @@ function Posts() {
             return;
         }
 
-        setExamplePosts((prev) => [{ username: 'Sip', message: postMessage, date_created: new Date().toISOString(), profile_picture: 'https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg'}, ...prev]);
+        setPosts((prev) => [{ username: 'Sip', message: postMessage, date_created: new Date().toISOString(), profile_picture: 'https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg'}, ...prev]);
         setPostMessage('');
     }
 
