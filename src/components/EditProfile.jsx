@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useState } from 'react';
 
-function ProfileEdit() {
+function EditProfile() {
     const [username, setUsername] = useState(null);
     const [email, setEmail] = useState(null);
     const [statusMessage, setStatusMessage] = useState(null);
@@ -73,4 +73,4 @@ function ProfileEdit() {
     )
 }
 
-export default ProfileEdit;
+export default EditProfile;

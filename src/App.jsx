@@ -6,7 +6,7 @@ import SignUp from './components/SignUp';
 import Sidebar from './components/Sidebar';
 import Posts from './components/Posts';
 import Profile from './components/Profile';
-import ProfileEdit from './components/ProfileEdit';
+import EditProfile from './components/EditProfile';
 import SearchPage from './components/SearchPage';
 import ChatPage from './components/ChatPage';
 import PageNotFound from './components/PageNotFound';
@@ -56,7 +56,7 @@ function App() {
             <>
               <Route path='/' element={ <Posts/> }/>
               <Route path='/username' element={ <Profile/> }/>
-              <Route path='/username/edit' element={ <ProfileEdit/> }/>              
+              <Route path='/username/edit' element={ <EditProfile/> }/>              
               <Route path='/search' element={ <SearchPage/> }/>
               <Route path='/chat/:chatId' element={ <ChatPage/> }/>
               <Route path='*' element={ <PageNotFound/> }/>
