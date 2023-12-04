@@ -73,7 +73,7 @@ function Sidebar({ theme, handleTheme }) {
             </div>
 
             <div className="h-[10%] flex items-center justify-center border-t-2 border-rose-600 dark:border-gray-800">
-                <Link to="/search" className="bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 text-gray-50 rounded-lg text-lg" onClick={() => setShowDropdown(false)}>
+                <Link to="/search" className="bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-2 text-gray-50 rounded text-lg" onClick={() => setShowDropdown(false)}>
                     Search
                     <i className="fa-solid fa-magnifying-glass ml-2"></i>
                 </Link>
