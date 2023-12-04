@@ -1,26 +1,28 @@
 import { Link, useParams } from "react-router-dom";
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 function DeleteProfile() {
     const userId = useParams();
 
     return (
-        <div className="bg-gray-50 dark:bg-gray-900 h-screen">
-            <div className="flex items-center justify-center gap-10 px-6 mx-auto lg:py-0">
-                <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow px-6 pb-6 space-y-4 w-full mt-8 md:mt-12 md:w-3/4 lg:w-1/2 xl:w-1/3 md:space-y-6 rounded-lg">
-                    <a href="https://github.com/brajpatel" target="_blank" className="flex flex-col items-center justify-center text-2xl font-semibold text-gray-900 dark:text-gray-50">
-                        <img className="w-40 h-40" src="/logo.png" alt="logo"/>
-                    </a>
+        <div className='h-screen lg:h-full w-full lg:w-auto absolute top-0 left-0 lg:relative lg:p-3 flex flex-col bg-white dark:bg-gray-900 overflow-x-hidden overflow-y-auto'>
+            <div className="min-h-[4.4rem] md:h-[4.6rem] lg:h-auto w-full flex justify-between items-center lg:justify-center px-4 lg:py-4 font-bold bg-rose-600 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 text-gray-50 lg:text-gray-900 dark:text-gray-50">
+                <Link to="/" className='block lg:hidden hover:bg-[rgb(255,255,255,0.4)] dark:hover:bg-[rgb(255,255,255,0.2)] p-2 rounded-full'>
+                    <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
+                </Link>
 
-                    <h1 className='font-bold dark:text-gray-100 text-xl lg:text-2xl text-center'>
-                        Welcome back
-                        <span className="block dark:text-gray-100">We're so excited to see you again!</span>
-                    </h1>
+                <p className='text-lg lg:text-xl lg:underline'>Delete Profile</p>
+            </div>
+            
+            <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center gap-4 sm:gap-5 md:gap-12 lg:gap-16 md:flex-row md:justify-center mx-auto mt-4 md:mt-8 px-4 py-8 md:py-10 lg:px-20 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
+                <p>Danger Zone:</p>
+                <p>Upon deleting your account, the following will occur:</p>
 
-                    <form className="space-y-4 md:space-y-6" action="#">
-                        <input id="userid" name="userid" value={userId} type="hidden"/>
-                        <button className="bg-rose-600 hover:bg-rose-500 dark:hover:bg-rose-700 text-white w-full py-2 rounded" type="submit">Sign in</button>
-                    </form>
-                </div>
+                <ol>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ol>
             </div>
         </div>
     )
