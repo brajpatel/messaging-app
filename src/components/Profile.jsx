@@ -22,12 +22,12 @@ function Profile() {
                     <p className='lg:text-lg mt-2 mb-4'>Date joined: [DATE_JOINED]</p>
 
                     <div className='flex gap-3'>
-                        <Link to='/userid/edit' className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl px-3 py-1 lg:px-4 lg:py-2 rounded outline-none'>
+                        <Link to='/userid/edit' className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg px-3 py-1 lg:px-4 lg:py-2 rounded outline-none'>
                             Edit
                             <i className="fa-regular fa-pen-to-square ml-2"></i>
                         </Link>
 
-                        <Link to="/userid/delete" className="bg-rose-600 hover:bg-rose-500 dark:bg-rose-600 dark:hover:bg-rose-700 px-4 py-2 text-gray-50 rounded text-lg">
+                        <Link to="/userid/delete" className="bg-rose-600 hover:bg-rose-500 dark:bg-rose-600 dark:hover:bg-rose-700 text-gray-50 text-lg px-3 py-1 lg:px-4 lg:py-2 rounded outline-none">
                             Delete
                             <i className="fa-regular fa-trash-can ml-2"></i>
                         </Link>
