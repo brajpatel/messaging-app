@@ -14,14 +14,15 @@ function DeleteProfile() {
                 <p className='text-lg lg:text-xl lg:underline'>Delete Profile</p>
             </div>
             
-            <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center gap-4 sm:gap-5 md:gap-12 lg:gap-16 md:flex-row md:justify-center mx-auto mt-4 md:mt-8 px-4 py-8 md:py-10 lg:px-20 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
-                <p>Danger Zone:</p>
-                <p>Upon deleting your account, the following will occur:</p>
+            <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center mx-auto mt-4 md:mt-8 px-4 py-8 md:py-10 lg:px-20 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors'>
+                <p className="mb-2 text-lg font-bold text-center underline">Danger Zone:</p>
+                <p className="text-center">Please carefully read the following before continuing as once you delete your account, there is no going back.</p>
+                <p className="text-center mb-2">By proceeding to delete your account, you understand that:</p>
 
-                <ol>
-                    <li>a</li>
-                    <li>b</li>
-                    <li>c</li>
+                <ol className="list-disc">
+                    <li>You will be removed from all users friends list</li>
+                    <li>All chats involving you and their messages will be deleted</li>
+                    <li>Any posts you created will be removed</li>
                 </ol>
             </div>
         </div>
