@@ -6,7 +6,7 @@ import Loader from './Loader';
 
 function Posts() {
     const [postMessage, setPostMessage] = useState('');
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState();
     const [showLoader, setShowLoader] = useState(false);
 
     const handlePostMessage = (e) => {
@@ -21,16 +21,33 @@ function Posts() {
             return;
         }
 
-        setPosts((prev) => [{ username: 'Sip', message: postMessage, date_created: new Date().toISOString(), profile_picture: 'https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg'}, ...prev]);
+        // call api with the form data
+        // call fetch posts to refresh them
+        
         setPostMessage('');
+    }
+
+    const fetchPosts = () => {
+        fetch('https://messaging-app-api.fly.dev/post', { mode: 'no-cors' })
+            .then((response) => {
+                if(response.status === 200) {
+                    return response.json();
+                }
+            })
+            .then((data) => {
+                setPosts(data);
+            })
+            .catch((err) => {
+                console.error("Error fetching posts:", err);
+            })
+            .finally(() => {
+                setShowLoader(false);
+            })
     }
 
     useEffect(() => {
         setShowLoader(true);
-
-        setTimeout(() => {
-            setShowLoader(false);
-        }, 3000);
+        fetchPosts();
     }, [])
 
     return (
@@ -58,7 +75,7 @@ function Posts() {
             </div>
 
             <ul className="lg:w-[90%] lg:flex lg:flex-col lg:items-center lg:gap-3 2xl:w-[95%] 2xl:grid 2xl:grid-cols-2 2xl:justify-items-center 2xl:gap-x-6 2xl:gap-y-6 mx-auto">
-                {!!posts.length && (
+                {posts && (
                     <>
                         {posts.map((post, index) => {
                             return (
