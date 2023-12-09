@@ -5,39 +5,7 @@ import SearchedFriend from './SearchedFriend';
 import Loader from './Loader';
 
 function SearchPage() {
-    const [exampleFriends, setExampleFriends] = useState([
-        {
-            username: 'Ashe',
-            status_message: 'All the world on one arrow',
-            profile_picture: 'https://64.media.tumblr.com/91b159df9a8c606c4fd5a74427d2aa9c/b9116db0ab4711c9-77/s500x750/01bd6c7a8791be7f6f6e4b7afee2424cf671bd53.png',
-            isFriend: false
-        },
-        {
-            username: 'Jhin',
-            status_message: 'In carnage I bloom, like a flower in the dawn',
-            profile_picture: 'https://i.pinimg.com/1200x/9d/00/4c/9d004c40630c28c54e1bc37d10b35657.jpg',
-            isFriend: false
-        },
-        {
-            username: 'Nasus',
-            status_message: 'Hehe',
-            profile_picture: 'https://i.pinimg.com/564x/0e/d8/54/0ed8549cbf8d409bc3b90731085f865d.jpg',
-            isFriend: false
-        },
-        {
-            username: 'Jinx',
-            status_message: 'Rules are made to be broken!',
-            profile_picture: 'https://wallpapers-clan.com/wp-content/uploads/2023/07/league-of-legends-jinx-pfp-01.jpg',
-            isFriend: false
-        },
-        {
-            username: 'Irelia',
-            status_message: 'Blade dancer slay',
-            profile_picture: 'https://i.pinimg.com/564x/fd/56/3b/fd563b26fb28a70d2b262a39af322655.jpg',
-            isFriend: false
-        }
-    ])
-    const [searchedFriends, setSearchedFriends] = useState([]);
+    const [searchedFriends, setSearchedFriends] = useState(null);
     const [showLoader, setShowLoader] = useState(false);
 
     const handleSearch = (e) => {
@@ -46,13 +14,27 @@ function SearchPage() {
         }));
     }
 
+    const fetchFriends = () => {
+        fetch('https://messaging-app-api.fly.dev/friend', { mode: 'no-cors' })
+            .then((response) => {
+                if(response.status === 200) {
+                    return response.json();
+                }
+            })
+            .then((data) => {
+                setSearchedFriends(data);
+            })
+            .catch((err) => {
+                console.error("Error fetching posts:", err);
+            })
+            .finally(() => {
+                setShowLoader(false);
+            })
+    }
+
     useEffect(() => {
         setShowLoader(true);
-
-        setTimeout(() => {
-            setSearchedFriends(exampleFriends);
-            setShowLoader(false);
-        }, 3000);
+        fetchFriends();
     }, [])
 
 
@@ -75,7 +57,7 @@ function SearchPage() {
             </div>
 
             <div className='w-full'>
-                    {searchedFriends.length ? (
+                    {searchedFriends ? (
                         <ul className="h-full w-full dark:text-gray-50 px-4 py-5 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 overflow-x-hidden overflow-y-auto">
                             {searchedFriends.map((friend, index) => {
                                 return (
