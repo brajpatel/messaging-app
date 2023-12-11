@@ -28,7 +28,7 @@ function Posts() {
     }
 
     const fetchPosts = () => {
-        fetch('https://messaging-app-api.fly.dev/post', { mode: 'no-cors' })
+        fetch('https://messaging-app-api.fly.dev/post')
             .then((response) => {
                 if(response.ok) {
                     return response.json();

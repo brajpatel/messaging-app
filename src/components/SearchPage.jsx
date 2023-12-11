@@ -15,7 +15,7 @@ function SearchPage() {
     }
 
     const fetchFriends = () => {
-        fetch('https://messaging-app-api.fly.dev/friend', { mode: 'no-cors' })
+        fetch('https://messaging-app-api.fly.dev/friend')
             .then((response) => {
                 if(response.status === 200) {
                     return response.json();
