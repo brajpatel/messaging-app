@@ -27,14 +27,22 @@ function Posts() {
         setPostMessage('');
     }
 
-    const fetchPosts = async () => {
-        const response = await fetch('https://messaging-app-api.fly.dev/post', { mode: 'no-cors' });
-        
-        if(response.ok) {
-            const data = await response.json();
-            setPosts(data);
-            setShowLoader(false);
-        }
+    const fetchPosts = () => {
+        fetch('https://messaging-app-api.fly.dev/post', { mode: 'no-cors' })
+            .then((response) => {
+                if(response.ok) {
+                    return response.json();
+                }
+            })
+            .then((data) => {
+                setPosts(data);                
+            })
+            .catch((err) => {
+                console.error("Error fetching posts:", err);
+            })
+            .finally(() => {
+                setShowLoader(false);
+            })
     }
 
     useEffect(() => {
