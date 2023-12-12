@@ -22,7 +22,7 @@ const exampleFriends = [
     }
 ]
 
-function Sidebar({ theme, handleTheme }) {
+function Sidebar({ theme, handleTheme, logout }) {
     const [showDropdown, setShowDropdown] = useState(false);
     const [friends, setFriends] = useState([]);
     const [showLoader, setShowLoader] = useState(false);
@@ -47,7 +47,7 @@ function Sidebar({ theme, handleTheme }) {
 
                 <div className='h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-[4.2rem] lg:min-w-[4.2rem] bg-cover bg-center bg-gray-300 dark:bg-gray-500 border-2 border-gray-200 dark:border-gray-50 cursor-pointer rounded-full' style={{backgroundImage: 'url(https://yurireviewsandmore.files.wordpress.com/2018/05/knbcpv1.jpg)'}} onClick={handleDropdown}></div>
 
-                <Dropdown showDropdown={showDropdown} handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme}/>
+                <Dropdown showDropdown={showDropdown} handleDropdown={handleDropdown} theme={theme} handleTheme={handleTheme} logout={logout}/>
             </div>
 
             <div className="relative h-4/5 dark:text-gray-50">

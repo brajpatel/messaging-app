@@ -16,6 +16,16 @@ function App() {
   const [theme, setTheme] = useState(null);
   const [user, setUser] = useState(true);
 
+  const logout = () => {
+    fetch('https://messaging-app-api.fly.dev/logout', { method: 'POST' })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+        })
+}
+
   useEffect(() => {
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
       setTheme('dark');
@@ -43,7 +53,7 @@ function App() {
   return (
     <div className={user ? 'h-screen flex flex-col lg:block dark:bg-gray-900' : 'h-screen bg-gray-100 dark:bg-gray-900'}>
       <BrowserRouter>
-        {user && <Sidebar theme={theme} handleTheme={handleTheme}/>}
+        {user && <Sidebar theme={theme} handleTheme={handleTheme} logout={logout}/>}
 
         <Routes>
           {!user ? (

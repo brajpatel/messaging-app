@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BsCollection } from "react-icons/bs";
 
-function Dropdown({ showDropdown, handleDropdown, theme, handleTheme }) {
+function Dropdown({ showDropdown, handleDropdown, theme, handleTheme, logout }) {
     return (
         <div className={showDropdown ?
             'transition-all w-full absolute top-full right-0 flex flex-col bg-white dark:bg-gray-900 border-x-0 border-t border-t-white border-b border-b-rose-600 dark:border-x-0 dark:border-y dark:border-gray-900 text-lg shadow-[0_8px_10px_rgba(0,0,0,0.5)] overflow-hidden z-10'
@@ -33,10 +33,10 @@ function Dropdown({ showDropdown, handleDropdown, theme, handleTheme }) {
 
             <hr className="border-1 border-rose-600 dark:border-gray-900"/>
             
-            <p className="h-full w-full py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-gray-50 cursor-pointer transition-colors">
+            <button className="h-full w-full py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-gray-50 cursor-pointer transition-colors outline-none" onClick={logout}>
                 Logout
                 <i className="fa-solid fa-door-open ml-2"></i>
-            </p>
+            </button>
         </div>
     )
 }
