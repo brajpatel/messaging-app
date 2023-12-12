@@ -24,6 +24,12 @@ function App() {
         .then((data) => {
             console.log(data);
         })
+        .catch((err) => {
+          console.error("Error logging out:", err);
+        })
+        .finally(() => {
+          setUser(null);
+        })
 }
 
   useEffect(() => {
