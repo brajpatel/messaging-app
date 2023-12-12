@@ -5,11 +5,12 @@ import SearchedFriend from './SearchedFriend';
 import Loader from './Loader';
 
 function SearchPage() {
-    const [searchedFriends, setSearchedFriends] = useState(null);
+    const [friendsList, setFriendsList] = useState(null);
+    const [searchedFriends, setSearchedFriends] = useState([]);
     const [showLoader, setShowLoader] = useState(false);
 
     const handleSearch = (e) => {
-        setSearchedFriends(exampleFriends.filter((friend) => {
+        setSearchedFriends(friendsList.filter((friend) => {
             return friend.username.toLowerCase().startsWith(e.target.value);
         }));
     }
@@ -22,6 +23,7 @@ function SearchPage() {
                 }
             })
             .then((data) => {
+                setFriendsList(data);
                 setSearchedFriends(data);
             })
             .catch((err) => {
@@ -57,7 +59,7 @@ function SearchPage() {
             </div>
 
             <div className='w-full'>
-                    {searchedFriends ? (
+                    {!!searchedFriends.length ? (
                         <ul className="h-full w-full dark:text-gray-50 px-4 py-5 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 overflow-x-hidden overflow-y-auto">
                             {searchedFriends.map((friend, index) => {
                                 return (
