@@ -19,7 +19,6 @@ const exampleFriends = [
     {
         username: 'Kayle',
         status_message: 'I am the Light!',
-        profile_picture: "https://i.pinimg.com/474x/c6/34/47/c63447bd8b594a51593e06d763084d37.jpg"
     }
 ]
 
