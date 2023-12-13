@@ -20,25 +20,14 @@ function App() {
     e.preventDefault();
 
     if(e.target.email.value.trim() === '' || e.target.password.value === '') return;
-    console.log([e.target.email.value, e.target.password.value]);
 
-    fetch('https://messaging-app-api.fly.dev/logout', {
+    fetch('https://messaging-app-api.fly.dev/login', {
         method: 'POST',
         headers: { 'Content-Type:': 'application/json' },
         body: {
-          email: e.target.email.value,
-          password: e.target.password.value
+          "email": e.target.email.value,
+          "password": e.target.password.value
         }
-      })
-      .then((response) => {
-          console.log(response.json());
-          return response.json();
-      })
-      .then((data) => {
-          console.log(data);
-      })
-      .catch((err) => {
-        console.error("Error loggin in:", err);
       })
   }
 
