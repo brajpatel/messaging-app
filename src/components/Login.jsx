@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ login }) {
     return (
         <section className="bg-gray-50 dark:bg-gray-900 h-screen">
             <div className="flex items-center justify-center gap-10 px-6 mx-auto lg:py-0">
@@ -14,7 +14,7 @@ function Login() {
                         <span className="block dark:text-gray-100">We're so excited to see you again!</span>
                     </h1>
 
-                    <form className="space-y-4 md:space-y-6" action="#">
+                    <form className="space-y-4 md:space-y-6" onSubmit={login}>
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="email">Email</label>
                             <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="email" name="email" id="email" placeholder="your-name@email.com" required/>

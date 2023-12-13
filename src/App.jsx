@@ -14,7 +14,33 @@ import PageNotFound from './components/PageNotFound';
 
 function App() {
   const [theme, setTheme] = useState(null);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
+
+  const login = (e) => {
+    e.preventDefault();
+
+    if(e.target.email.value.trim() === '' || e.target.password.value === '') return;
+    console.log([e.target.email.value, e.target.password.value]);
+
+    fetch('https://messaging-app-api.fly.dev/logout', {
+        method: 'POST',
+        headers: { 'Content-Type:': 'application/json' },
+        body: {
+          email: e.target.email.value,
+          password: e.target.password.value
+        }
+      })
+      .then((response) => {
+          console.log(response.json());
+          return response.json();
+      })
+      .then((data) => {
+          console.log(data);
+      })
+      .catch((err) => {
+        console.error("Error loggin in:", err);
+      })
+  }
 
   const logout = () => {
     fetch('https://messaging-app-api.fly.dev/logout', { method: 'POST' })
@@ -65,8 +91,8 @@ function App() {
           {!user ? (
             <>
               <Route path='/' element={ <Navigate to='/login' /> }/>
-              <Route path='/login' element={ <Login handleTheme={handleTheme}/> }/>
-              <Route path='/sign-up' element={ <SignUp handleTheme={handleTheme}/> }/>
+              <Route path='/login' element={ <Login login={login}/> }/>
+              <Route path='/sign-up' element={ <SignUp /> }/>
               <Route path='*' element={<Navigate to="/login"/>}/>
             </>
           ) : (
