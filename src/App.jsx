@@ -14,7 +14,7 @@ import PageNotFound from './components/PageNotFound';
 
 function App() {
   const [theme, setTheme] = useState(null);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
 
   const login = (e) => {
     e.preventDefault();
@@ -23,11 +23,19 @@ function App() {
 
     fetch('https://messaging-app-api.fly.dev/login', {
         method: 'POST',
-        headers: { 'Content-Type:': 'application/json' },
-        body: {
+        body: JSON.stringify({
           "email": e.target.email.value,
           "password": e.target.password.value
-        }
+        })
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.error("Error logging in:", err);
       })
   }
 
