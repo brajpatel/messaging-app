@@ -21,10 +21,26 @@ function Posts() {
             return;
         }
 
-        // call api with the form data
-        // call fetch posts to refresh them
-        
-        setPostMessage('');
+        fetch('https://messaging-app-api.fly.dev/post', {
+            method: 'POST',
+            body: JSON.stringify({
+                    message: postMessage,
+                    userId: '654bbc119a40fbaf15313dcc'
+                })
+            })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((err) => {
+                console.error("Error creating post:", err);
+            })
+            .finally(() => {
+                setPostMessage('');
+                fetchPosts();
+            })
     }
 
     const fetchPosts = () => {
@@ -52,10 +68,10 @@ function Posts() {
 
     return (
         <div id="container" className='relative hidden lg:block lg:h-full lg:px-2 xl:px4 pt-2 pb-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 overflow-x-hidden overflow-y-auto'>
-            <form className="flex justify-center items-center gap-3 py-3">
-                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="What's on your mind today..." maxLength="120" value={postMessage} onInput={handlePostMessage} required={true}/>
+            <form className="flex justify-center items-center gap-3 py-3" onSubmit={createPost}>
+                <input className='w-[80%] bg-white dark:bg-gray-800 text-lg text-black dark:text-gray-100 px-4 py-2 border-2 border-gray-200 dark:border-gray-800 focus:outline-none focus:border-rose-500 dark:focus:border-gray-500 rounded' placeholder="What's on your mind today..." maxLength="120" onInput={handlePostMessage} value={postMessage} name="post_message" id="post_message" required={true}/>
 
-                <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' onClick={createPost} type='submit'>
+                <button className='flex justify-center items-center gap-2 bg-rose-600 hover:bg-rose-500 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-[0.85rem] sm:py-2 text-gray-50 rounded-lg text-lg outline-none' type='submit'>
                     Post
                     <IoSend/>
                 </button>
