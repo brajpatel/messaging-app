@@ -4,7 +4,7 @@ import { AiOutlineUserDelete } from 'react-icons/ai';
 function SearchedFriend({ friend }) {
     return (
         <li className="relative w-full sm:w-auto rounded flex gap-6 px-4 pr-14 py-3 md:py-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-500">
-            <div className='h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-16 lg:min-w-[4rem] bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full float-left overflow-hidden' style={{backgroundImage: friend.profile_picture ? `url(${friend.profile_picture})` : `url('/public/default-pfp.png')`}}></div>
+            <div className='h-14 min-w-[3.5rem] md:h-[3.75rem] md:min-w-[3.75rem] lg:h-16 lg:min-w-[4rem] bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full float-left overflow-hidden' style={{backgroundImage: friend.profile_picture ? `url(${friend.profile_picture})` : `url('/default-pfp.png')`}}></div>
 
             <div className='float-none overflow-hidden'>
                 <p className="text-[1.1rem] lg:text-lg font-bold">{friend.username}</p>
