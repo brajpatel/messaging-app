@@ -15,7 +15,7 @@ function Dropdown({ showDropdown, handleDropdown, theme, handleTheme, logout }) 
 
             <hr className="border-1 border-rose-600 dark:border-gray-900"/>
 
-            <Link to="/username" className="h-full w-full py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-gray-50 cursor-pointer transition-colors" onClick={handleDropdown}>
+            <Link to="/account/username" className="h-full w-full py-3 text-center hover:bg-rose-600 hover:text-gray-50 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-gray-50 cursor-pointer transition-colors" onClick={handleDropdown}>
                 Profile
                 <i className="fa-regular fa-user ml-2"></i>
             </Link>

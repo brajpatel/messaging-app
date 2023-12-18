@@ -95,7 +95,7 @@ function App() {
           ) : (
             <>
               <Route path='/' element={ <Posts/> }/>
-              <Route path='/:username' element={ <Profile/> }/>
+              <Route path='/account/:username' element={ <Profile/> }/>
               <Route path='/account/edit' element={ <EditAccount/> }/>
               <Route path='/account/delete' element={ <DeleteAccount/> }/>
               <Route path='/search' element={ <SearchPage/> }/>
