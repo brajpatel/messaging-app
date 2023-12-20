@@ -16,12 +16,12 @@ function Login({ login }) {
 
                     <form className="space-y-4 md:space-y-6" onSubmit={login}>
                         <div>
-                            <label className="text-lg dark:text-gray-100" htmlFor="email">Email</label>
+                            <label className="text-lg dark:text-gray-100" htmlFor="email">Email*</label>
                             <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="email" name="email" id="email" placeholder="your-name@email.com" required/>
                         </div>
 
                         <div>
-                            <label className="text-lg dark:text-gray-100" htmlFor="password">Password</label>
+                            <label className="text-lg dark:text-gray-100" htmlFor="password">Password*</label>
                             <input className='bg-white dark:bg-gray-700 block text-lg text-black dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="password" name="password" id="password" placeholder="••••••••••••" required/>
                         </div>
 
