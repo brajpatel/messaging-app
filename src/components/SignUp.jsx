@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function SignUp({ login }) {
+function SignUp({ setUser }) {
     const signup = (e) => {
         e.preventDefault();
     
@@ -23,6 +23,25 @@ function SignUp({ login }) {
           })
           .catch((err) => {
             console.error("Error signing up:", err);
+          })
+          .finally(() => {
+            // log user in after successfully signing up
+            fetch('https://messaging-app-api.fly.dev/profile/create', {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: e.target.email.value,
+                    password: e.target.password.value
+                })
+            })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setUser(data);
+            })
+            .catch((err) => {
+                console.error("Error logging in:", err);
+            })
           })
       }
 
