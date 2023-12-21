@@ -1,6 +1,32 @@
 import { Link } from "react-router-dom";
 
 function SignUp() {
+
+    const signup = (e) => {
+        e.preventDefault();
+    
+        if(e.target.email.value.trim() === '' || e.target.password.value === '') return;
+    
+        fetch('https://messaging-app-api.fly.dev/profile/create', {
+            method: 'POST',
+            body: JSON.stringify({
+                "username": e.target.username.value,
+                "email": e.target.email.value,
+                "password": e.target.password.value,
+                "confirm_password": e.target.confirm_password.value
+            })
+          })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.error("Error signing up:", err);
+          })
+      }
+
     return (
         <section className="bg-gray-50 dark:bg-gray-900 h-full pb-4 sm:pb-0">
             <div className="flex items-center justify-center gap-6 px-6 mx-auto lg:py-0">
@@ -41,7 +67,7 @@ function SignUp() {
                         <img className="w-40 h-40" src="/logo.png" alt="logo"/>
                     </a>
                     <h1 className='font-bold dark:text-gray-100 text-xl lg:text-2xl md:underline text-center'>Create an account</h1>
-                    <form className="space-y-4 md:space-y-6" action="#">
+                    <form className="space-y-4 md:space-y-6" onsubmit={signup}>
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="username">Username*</label>
                             <input className='bg-white dark:bg-gray-700 block text-lg dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="text" name="username" id="username" placeholder="superDuperCoolKid9000" required/>
