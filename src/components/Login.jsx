@@ -29,7 +29,7 @@ function Login({ login }) {
                             Don't have an account yet? <Link to="/sign-up" className="text-rose-600 dark:text-rose-500 hover:underline">Sign up</Link>
                         </p>
 
-                        <button className="bg-rose-600 hover:bg-rose-500 dark:hover:bg-rose-700 text-white w-full py-2 rounded" type="submit">Sign in</button>
+                        <button className="bg-rose-600 hover:bg-rose-500 dark:hover:bg-rose-700 text-white w-full py-2 rounded" type="submit">Login</button>
                     </form>
                 </div>
             </div>
