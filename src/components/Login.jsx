@@ -11,7 +11,7 @@ function Login({ login }) {
 
                     <h1 className='font-bold dark:text-gray-100 text-xl lg:text-2xl text-center'>
                         Welcome back
-                        <span className="block dark:text-gray-100">We're so excited to see you again!</span>
+                        <span className="block dark:text-gray-100">We're so glad to see you again!</span>
                     </h1>
 
                     <form className="space-y-4 md:space-y-6" onSubmit={login}>
