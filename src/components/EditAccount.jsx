@@ -12,8 +12,6 @@ function EditAccount() {
         if(profilePicture) setProfilePicture(null);
 
         setProfilePicture(URL.createObjectURL(e.target.files[0]));
-
-        console.log(profilePicture)
     }
 
     const removeProfilePicture = () => {
