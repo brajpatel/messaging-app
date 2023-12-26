@@ -23,6 +23,7 @@ function App() {
 
     fetch('https://messaging-app-api.fly.dev/login', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           "email": e.target.email.value,
           "password": e.target.password.value
