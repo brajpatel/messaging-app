@@ -76,7 +76,6 @@ function ChatPage() {
             return;
         };
 
-        setMessages((prev) => [...prev, { message: message, date_sent: new Date().toISOString(), user: true }]);
         setMessage('');
     }
 
