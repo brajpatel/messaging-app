@@ -26,7 +26,7 @@ function SignUp({ setUser }) {
           })
           .finally(() => {
             // log user in after successfully signing up
-            fetch('https://messaging-app-api.fly.dev/profile/create', {
+            fetch('https://messaging-app-api.fly.dev/login', {
                 method: 'POST',
                 body: JSON.stringify({
                     email: e.target.email.value,
