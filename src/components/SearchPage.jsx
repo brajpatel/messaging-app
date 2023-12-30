@@ -16,6 +16,7 @@ function SearchPage() {
     }
 
     const fetchFriends = () => {
+        // FILTER THE LOGGED IN USER FROM THE LIST SO THEY CAN'T ADD THEMSELVES
         fetch('https://messaging-app-api.fly.dev/friend')
             .then((response) => {
                 if(response.status === 200) {
