@@ -107,7 +107,8 @@ function SignUp({ setUser }) {
                         </div>
 
                         <p className="text-lg dark:text-gray-300 text-center">
-                            Already have an account? <Link to="/login" className="text-rose-600 dark:text-rose-500 hover:underline">Login</Link>
+                            Already have an account?
+                            <Link to="/login" className="ml-1 text-rose-600 dark:text-rose-500 hover:underline">Login</Link>
                         </p>
 
                         <button className="bg-rose-600 hover:bg-rose-500 dark:hover:bg-rose-700 text-white w-full py-2 rounded" type="submit">Sign up</button>
