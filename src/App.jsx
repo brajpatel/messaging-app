@@ -91,7 +91,7 @@ function App() {
               <Route path='/' element={ <Navigate to='/login' /> }/>
               <Route path='/login' element={ <Login login={login}/> }/>
               <Route path='/sign-up' element={ <SignUp setUser={setUser} /> }/>
-              <Route path='*' element={<Navigate to="/login"/>}/>
+              <Route path='*' element={ <Navigate to="/login"/> }/>
             </>
           ) : (
             <>
