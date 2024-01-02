@@ -74,7 +74,7 @@ function SignUp({ setUser }) {
                             <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
                             <div className="flex flex-col">
                                 <p className="font-bold text-lg lg:text-xl dark:text-gray-200">A third exciting feature</p>
-                                <p className="lg:text-lg dark:text-gray-300">Description for this feature to make you go woooooh</p>
+                                <p className="lg:text-lg dark:text-gray-300">Description for this feature to make you go yippeeee</p>
                             </div>
                         </div>
                     </div>
