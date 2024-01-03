@@ -25,7 +25,6 @@ function SignUp({ setUser }) {
             console.error("Error signing up:", err);
           })
           .finally(() => {
-            // log user in after successfully signing up
             fetch('https://messaging-app-api.fly.dev/login', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -85,7 +84,7 @@ function SignUp({ setUser }) {
                         <img className="w-40 h-40" src="/logo.png" alt="logo"/>
                     </a>
                     <h1 className='font-bold dark:text-gray-100 text-xl lg:text-2xl md:underline text-center'>Create an account</h1>
-                    <form className="space-y-4 md:space-y-6" onsubmit={signup}>
+                    <form className="space-y-4 md:space-y-6" onSubmit={signup}>
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="username">Username*</label>
                             <input className='bg-white dark:bg-gray-700 block text-lg dark:text-gray-100 w-full px-4 py-2 mt-2 border-2 border-gray-200 dark:border-gray-700 focus:outline-none focus:border-rose-500 dark:focus:border-gray-400 rounded' type="text" name="username" id="username" placeholder="superDuperCoolKid9000" required/>
