@@ -8,6 +8,7 @@ function SignUp({ setUser }) {
     
         fetch('https://messaging-app-api.fly.dev/profile/create', {
             method: 'POST',
+            
             body: JSON.stringify({
                 "username": e.target.username.value,
                 "email": e.target.email.value,
@@ -45,8 +46,8 @@ function SignUp({ setUser }) {
       }
 
     return (
-        <section className="bg-gray-50 dark:bg-gray-900 h-full pb-4 sm:pb-0">
-            <div className="flex items-center justify-center gap-6 px-6 mx-auto lg:py-0">
+        <section className="bg-gray-50 dark:bg-gray-900 h-full">
+            <div className="flex items-center justify-center gap-6 px-6 pb-6 mx-auto lg:py-0">
                 <div className="hidden md:flex flex-col items-center md:w-2/5">
                     <a href="https://github.com/brajpatel" target="_blank" className="flex items-center text-2xl font-bold dark:text-gray-50">
                         <img className="w-32 h-32" src="/logo.png" alt="logo"/>
