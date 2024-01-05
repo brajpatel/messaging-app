@@ -8,7 +8,7 @@ function SignUp({ setUser }) {
     
         fetch('https://messaging-app-api.fly.dev/profile/create', {
             method: 'POST',
-            
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 "username": e.target.username.value,
                 "email": e.target.email.value,
