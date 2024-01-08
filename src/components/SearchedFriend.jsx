@@ -3,7 +3,9 @@ import { AiOutlineUserDelete } from 'react-icons/ai';
 
 function SearchedFriend({ friend }) {
 
+    const checkIfFriend = () => {
     // WHEN MAPPING OVER ALL USERS, CHECK IF EACH ONE IS IN THE LOGGED IN USER'S FRIENDS LIST
+    }
 
     return (
         <li className="relative w-full sm:w-auto rounded flex gap-6 px-4 pr-14 py-3 md:py-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-800 transition-all hover:border-rose-600 dark:hover:border-gray-500">
