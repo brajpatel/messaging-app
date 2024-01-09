@@ -1,10 +1,18 @@
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import { AiOutlineUserDelete } from 'react-icons/ai';
 
-function SearchedFriend({ friend }) {
+function SearchedFriend({ friend, fetchFriends }) {
 
     const checkIfFriend = () => {
     // WHEN MAPPING OVER ALL USERS, CHECK IF EACH ONE IS IN THE LOGGED IN USER'S FRIENDS LIST
+    }
+
+    const addFriend = () => {
+
+    }
+
+    const removeFriend = () => {
+        
     }
 
     return (
