@@ -31,7 +31,25 @@ function SearchedFriend({ friend, fetchFriends }) {
     }
 
     const removeFriend = () => {
-
+        fetch('https://messaging-app-api.fly.dev/friend/remove', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userid: '',
+                friendid: ''
+            })
+        })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .finally(() => {
+            fetchFriends();
+        })
     }
 
     return (
