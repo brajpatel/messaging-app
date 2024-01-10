@@ -15,7 +15,7 @@ function SearchedFriend({ friend, fetchFriends }) {
             },
             body: JSON.stringify({
                 userid: '',
-                friendid: ''
+                friendid: friend._id
             })
         })
         .then((response) => {
@@ -38,7 +38,7 @@ function SearchedFriend({ friend, fetchFriends }) {
             },
             body: JSON.stringify({
                 userid: '',
-                friendid: ''
+                friendid: friend._id
             })
         })
         .then((response) => {
