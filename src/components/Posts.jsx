@@ -26,7 +26,7 @@ function Posts() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                     message: postMessage,
-                    userId: '654bbc119a40fbaf15313dcc'
+                    userId: ''
                 })
             })
             .then((response) => {
