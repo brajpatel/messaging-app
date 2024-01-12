@@ -10,9 +10,7 @@ function SearchedFriend({ friend, fetchFriends }) {
     const addFriend = () => {
         fetch('https://messaging-app-api.fly.dev/friend/add', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 userid: '',
                 friendid: friend._id
@@ -33,9 +31,7 @@ function SearchedFriend({ friend, fetchFriends }) {
     const removeFriend = () => {
         fetch('https://messaging-app-api.fly.dev/friend/remove', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 userid: '',
                 friendid: friend._id
@@ -62,11 +58,11 @@ function SearchedFriend({ friend, fetchFriends }) {
             </div>
 
             {friend.isFriend ? (
-                <div className='bg-red-500 hover:bg-red-400 dark:bg-red-600 dark:hover:bg-red-700 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer' onclick={removeFriend}>
+                <div className='bg-red-500 hover:bg-red-400 dark:bg-red-600 dark:hover:bg-red-700 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer' onClick={removeFriend}>
                     <AiOutlineUserDelete/>
                 </div>
                 ) : (
-                <div className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer' onclick={addFriend}>
+                <div className='bg-green-500 hover:bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 text-gray-50 text-lg lg:text-xl p-1 absolute top-1/2 right-4 translate-y-[-50%] rounded-full cursor-pointer' onClick={addFriend}>
                     <AiOutlineUserAdd/>
                 </div>
             )}
