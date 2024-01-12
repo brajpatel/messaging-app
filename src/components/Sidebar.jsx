@@ -7,16 +7,19 @@ import Loader from "./Loader";
 
 const exampleFriends = [
     {
+        _id: '2jb2vhj3b21jkb',
         username: 'Neeko',
         status_message: 'Neeko is best decision!',
         profile_picture: 'https://static.zerochan.net/Neeko.%28League.of.Legends%29.full.3688255.jpg'
     },
     {
+        _id: 'fio34nk3n2jb',
         username: 'Morgana',
         status_message: 'Support Slay',
         profile_picture: 'https://static.zerochan.net/Morgana.%28League.of.Legends%29.full.3708469.jpg'
     },
     {
+        _id: 'f9hiosdnfin',
         username: 'Kayle',
         status_message: 'I am the Light!',
     }
@@ -53,11 +56,9 @@ function Sidebar({ theme, handleTheme, logout }) {
             <div className="relative h-4/5 dark:text-gray-50">
                 {friends.length ? (
                     <ul className="h-full w-full px-4 py-5 flex flex-col gap-3 lg:flex lg:flex-col lg:flex-nowrap overflow-x-hidden overflow-y-auto">
-                        {friends.map((friend, index) => {
+                        {friends.map((friend) => {
                             return (
-                                <Link key={index} to={`/chat/${index}`}>
-                                    <AddedFriend friend={friend}/>
-                                </Link>
+                                <AddedFriend key={friend._id} friend={friend}/>
                             )
                         })}
                     </ul>

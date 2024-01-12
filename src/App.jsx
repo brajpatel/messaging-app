@@ -14,7 +14,7 @@ import PageNotFound from './components/PageNotFound';
 
 function App() {
   const [theme, setTheme] = useState(null);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
 
   const login = (e) => {
     e.preventDefault();
