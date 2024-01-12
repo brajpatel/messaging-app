@@ -64,7 +64,7 @@ function SearchPage() {
                         <ul className="h-full w-full dark:text-gray-50 px-4 py-5 grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 overflow-x-hidden overflow-y-auto">
                             {searchedFriends.map((friend, index) => {
                                 return (
-                                    <SearchedFriend key={index} friend={friend} fetchFriends={fetchFriends}/>
+                                    <SearchedFriend key={friend._id} friend={friend} fetchFriends={fetchFriends}/>
                                 )
                             })}
                         </ul>
