@@ -19,11 +19,7 @@ function DeleteAccount() {
             </div>
             
             <div className='w-4/5 lg:w-full xl:w-max flex flex-col items-center mx-auto mt-4 md:mt-8 px-4 py-8 md:py-10 lg:px-20 text-gray-900 dark:text-gray-100 border-2 border-gray-400 hover:border-rose-500 dark:border-gray-700 dark:hover:border-gray-500 rounded transition-colors text-lg'>
-                <Link to="/" className='block lg:hidden hover:bg-[rgb(255,255,255,0.4)] dark:hover:bg-[rgb(255,255,255,0.2)] p-2 rounded-full'>
-                    <AiOutlineArrowLeft className='text-2xl cursor-pointer'/>
-                </Link>
-
-                <p className="mb-2 text-lg md:text-xl font-bold text-center underline">Danger Zone:</p>
+                <p className="mb-2 text-lg lg:text-xl font-bold text-center underline">Danger Zone:</p>
                 <p className="text-center">Please carefully read the following before continuing as once you delete your account, there is no going back.</p>
                 <p className="text-center mb-2">By proceeding, you understand that:</p>
 
