@@ -56,6 +56,7 @@ function SignUp({ setUser }) {
                     <div className="flex flex-col gap-5">
                         <div className="flex gap-2">
                             <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+                            
                             <div className="flex flex-col">
                                 <p className="font-bold text-lg lg:text-xl dark:text-gray-200">Make connections</p>
                                 <p className="lg:text-lg dark:text-gray-300">Connect with others from around the world!</p>
@@ -64,6 +65,7 @@ function SignUp({ setUser }) {
 
                         <div className="flex gap-2">
                             <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+
                             <div className="flex flex-col">
                                 <p className="font-bold text-lg lg:text-xl dark:text-gray-200">Another exciting feature</p>
                                 <p className="lg:text-lg dark:text-gray-300">Description for the feature</p>
@@ -72,6 +74,7 @@ function SignUp({ setUser }) {
 
                         <div className="flex gap-2">
                             <i className="fa-solid fa-circle-check text-xl text-rose-600"></i>
+
                             <div className="flex flex-col">
                                 <p className="font-bold text-lg lg:text-xl dark:text-gray-200">A third exciting feature</p>
                                 <p className="lg:text-lg dark:text-gray-300">Description for this feature to make you go yippeeee</p>
@@ -86,7 +89,7 @@ function SignUp({ setUser }) {
                     </a>
 
                     <h1 className='font-bold dark:text-gray-100 text-xl lg:text-2xl md:underline text-center'>Create an account</h1>
-                    
+
                     <form className="space-y-4 md:space-y-6" onSubmit={signup}>
                         <div>
                             <label className="text-lg dark:text-gray-100" htmlFor="username">Username*</label>
