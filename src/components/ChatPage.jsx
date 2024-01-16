@@ -5,59 +5,6 @@ import {  IoSend } from "react-icons/io5";
 import Message from './Message';
 import Loader from './Loader';
 
-const sampleMessages = [
-    {
-        message: 'First message, hello',
-        date_sent: new Date().toISOString(),
-        user: true
-    },
-    {
-        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-        date_sent: new Date().toISOString(),
-        user: false
-    },
-    {
-        message: 'Okay then',
-        date_sent: new Date().toISOString(),
-        user: true
-    },
-    {
-        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-        date_sent: new Date().toISOString(),
-        user: true
-    },
-    {
-        message: 'Lorem ipsum dolor sit amet consectetur repellendus. Quod, corrupti veritatis?',
-        date_sent: new Date().toISOString(),
-        user: false
-    },
-    {
-        message: 'First message, hello',
-        date_sent: new Date().toISOString(),
-        user: true
-    },
-    {
-        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-        date_sent: new Date().toISOString(),
-        user: false
-    },
-    {
-        message: 'Okay then',
-        date_sent: new Date().toISOString(),
-        user: true
-    },
-    {
-        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vitae, aliquam quam consectetur quidem nobis maxime repellendus. Quod, corrupti veritatis?',
-        date_sent: new Date().toISOString(),
-        user: true
-    },
-    {
-        message: 'Lorem ipsum dolor sit amet consectetur repellendus. Quod, corrupti veritatis?',
-        date_sent: new Date().toISOString(),
-        user: false
-    },
-]
-
 function ChatPage() {
     const messagesEnd = useRef(null);
     const [messages, setMessages] = useState([]);
