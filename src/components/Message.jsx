@@ -12,6 +12,7 @@ function Message({ message, dateSent, user }) {
     }, [])
 
     return (
+            // HERE TOO 
         <div className={`h-auto flex ${message.user ? 'flex-row-reverse justify-end self-end' : ''} gap-3 mb-4`}>
             {/* DISPLAY DEFAULT PICTURE FOR EITHER USER OR FRIEND */}
             <div className='h-[2rem] min-w-[2rem] md:h-[2.6rem] md:min-w-[2.6rem] xl:h-[3.2rem] xl:min-w-[3.2rem] self-end bg-cover bg-center border border-rose-600 dark:border-gray-400 rounded-full overflow-hidden' style={{backgroundImage: `url('https://i.pinimg.com/564x/fd/56/3b/fd563b26fb28a70d2b262a39af322655.jpg')`}}></div>
